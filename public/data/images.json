@@ -1,0 +1,148 @@
+[
+  {
+    "public_id": "ahtml-dog-sitter_tzftkl",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1756561471/ahtml-dog-sitter_tzftkl.png",
+    "title": "Dog Sitter Template",
+    "description": "Modern template featuring smooth and parallax scrolling",
+    "author": "simpleDesigns",
+    "credits": "Images by: Unsplash. Image Storage API by: Cloudinary. Hosting by: Netlify",
+    "liveDemo": "https://ahtml-dog-sitter.netlify.app/",
+    "price": "24.99",
+    "priceId": "price_1SIfmsBqWU8yVEMvlTLSGK9y",
+    "features": [
+      {
+        "title": "Responsive Design",
+        "detail": "Looks great on all screen sizes"
+      },
+      {
+        "title": "Interactive",
+        "detail": "Parallax scrolling for better visual and dynamic experience"
+      },
+      {
+        "title": "Fully Customizable",
+        "detail": "Easy customization for novices and pros alike."
+      },
+      {
+        "title": "SEO Optimized",
+        "detail": "Meta tags and semantic markup included"
+      },
+      {
+        "title": "Background",
+        "detail": "Backgrounds on every page to capture attention"
+      },
+      {
+        "title": "Navigation",
+        "detail": "Desktop and Mobile menues"
+      }
+    ],
+    "included":  ["HTML Files,", " CSS Files,", " Tailwind config,", " and Image Place Holders"]
+  },
+
+  {
+    "public_id": "smile-card_bqlnzr",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1751762394/smile-card_bqlnzr.png",
+    "title": "DevKit Template",
+    "description": "Responsive portfolio template crafted for creative professionals — freelancers/Developers.",
+    "author": "simpleDesigns",
+    "credits": "Image place holder by Unsplash. Image Storage API by Cloudinary.",
+    "liveDemo": "https://ahtml-portfolio.netlify.app/",
+    "price": "29.99",
+    "features": [
+      {
+        "title": "Responsive Design",
+        "detail": "Looks great on all screen sizes."
+      },
+      {
+        "title": "Interactive",
+        "detail": "Animation in all pages."
+      },
+      {
+        "title": "Fully Customizable",
+        "detail": "Designed for easy customization by novices and pros alike."
+      },
+      {
+        "title": "SEO Optimized",
+        "detail": "Meta tags and semantic markup included."
+      },
+      {
+        "title": "Live Background",
+        "detail": "Transparent live video background."
+      },
+      {
+        "title": "Navigation",
+        "detail": "Desktop and Mobile menues with room for a logo."
+      },
+      {
+        "title": "Interactivity",
+        "detail": "HOME, CTA, and SUBMIT buttons for instant direction."
+      },
+      {
+        "title": "UI Components",
+        "detail": "Cards for summarized view users can interact with."
+      },
+      {
+        "title": "Image Gallery",
+        "detail": "Design to howcase your best work, skills, and experience."
+      },
+      {
+        "title": "Contact Form",
+        "detail": "Implemented to collect and transmit user input."
+      }
+    ],
+    "included":  ["HTML Files, ", "CSS Files, ", "JavaScript Files, ", "Image Place Holders"]
+  },
+
+  {
+    "public_id": "template-screenshot_mr75bw",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1751762394/template-screenshot_mr75bw",
+    "title": "Piano Coach Template",
+    "description": "A modern, responsive one-page HTML template designed for piano coaches, music teachers, or creative professionals who want to showcase lessons, programs, and events with style.",
+    "author": "simpleDesigns",
+    "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
+    "liveDemo": "https://ahtml-piano-coach-template.netlify.app/",
+    "price": "24.99",
+    "features": [
+      {
+        "title": "Responsive Design",
+        "detail": "Smooth scroll and responsive layout"
+      },
+      {
+        "title": "Interactive",
+        "detail": "Animated scroll effects with AOS library"
+      },
+      {
+        "title": "Fully Customizable",
+        "detail": "Easy to customize for your brand"
+      },
+      {
+        "title": "SEO Optimized",
+        "detail": "Meta tags and semantic markup included."
+      },
+      {
+        "title": "Hero Section",
+        "detail": "Styled with call-to-action buttons"
+      },
+      {
+        "title": "Navigation",
+        "detail": "Mobile hamburger menu & animated side navigation"
+      },
+      {
+        "title": "Interactivity",
+        "detail": "HOME, CTA, and SUBMIT buttons for instant direction."
+      },
+      {
+        "title": "UI Components",
+        "detail": "Program cards (Beginner, Intermediate, Advanced)"
+      },
+      {
+        "title": "Social Media",
+        "detail": "Media icons on a sidebar with hover effects"
+      },
+      {
+        "title": "Contact Form",
+        "detail": "Designed but non-functional by default"
+      }
+    ],
+    "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
+  }
+]
