@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useNavigate } from 'react-router-dom';
 
 // Load Stripe with your public key
-const stripePromise = loadStripe('your-publishable-key-here');
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 const Stripebutton = ({ total, templateTitle }) => {
   const navigate = useNavigate();

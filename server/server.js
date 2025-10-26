@@ -11,7 +11,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const port = 4242;
 
 app.use(cors({
-  origin: [process.env.CLIENT_URL || 'http://localhost:5173']
+  origin: [
+    "http://localhost:5173",                    // for local dev
+    "https://ahsimpledesigns.netlify.app"       // your live frontend
+  ],
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
 }));
 
 app.use(express.json());
