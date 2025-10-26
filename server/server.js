@@ -13,7 +13,7 @@ const port = 4242;
 app.use(cors({
   origin: [
     "http://localhost:5173",                    // for local dev
-    "https://ahsimpledesigns.netlify.app"       // your live frontend
+    "ahsimpledesigns.netlify.app"       // your live frontend
   ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
@@ -115,7 +115,7 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 
 // ✅ Route 4: Serve all articles
 app.get("/articles", (req, res) => {
-  const filePath = path.join(process.cwd(), "articles.json");
+  const filePath = path.join(process.cwd(), 'server', "articles.json");
 
   fs.readFile(filePath, "utf-8", (err, data) => {
     if (err) {
