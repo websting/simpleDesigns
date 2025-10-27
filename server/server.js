@@ -98,7 +98,7 @@ app.get("/secure-download/:sessionId", async (req, res) => {
       return res.status(400).json({ error: "Template information missing." });
     }
 
-    const filePath = path.join(process.cwd(), "server", "downloads", `${templateName}.zip`);
+    const filePath = path.join(process.cwd(), "downloads", `${templateName}.zip`);
     console.log("🔍 Checking path:", filePath);
 
     if (!fs.existsSync(filePath)) {
