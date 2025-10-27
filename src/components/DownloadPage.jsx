@@ -15,7 +15,7 @@ function DownloadPage() {
 
     const fetchSession = async () => {
       try {
-        const res = await fetch(`http://localhost:4242/checkout-session/${id}`);
+        const res = await fetch(`https://simpledesigns.onrender.com/checkout-session/${id}`);
         const data = await res.json();
 
         if (data?.template) {

@@ -10,7 +10,7 @@ function ArticlePage() {
 
   useEffect(() => {
     // Fetch single article
-    fetch(`http://localhost:4242/articles/${slug}`)
+    fetch(`https://simpledesigns.onrender.com/articles/${slug}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch article");
         return res.json();
@@ -18,7 +18,7 @@ function ArticlePage() {
       .then((data) => {
         setArticle(data);
         // Fetch related articles (reuse all articles and filter)
-        return fetch("http://localhost:4242/articles");
+        return fetch("https://simpledesigns.onrender.com/articles");
       })
       .then((res) => res.json())
       .then((all) => {

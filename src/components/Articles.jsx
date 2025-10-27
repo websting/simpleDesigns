@@ -5,7 +5,7 @@ function Articles() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4242/articles")
+    fetch("https://simpledesigns.onrender.com/articles")
       .then((res) => res.json())
       .then((data) => {
         console.log("📰 Articles loaded:", data);
