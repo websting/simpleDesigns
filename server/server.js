@@ -138,7 +138,7 @@ app.get("/articles", (req, res) => {
 
 // ✅ Route 5: Fetch a single article dynamically by slug
 app.get("/articles/:slug", (req, res) => {
-  const filePath = path.join(process.cwd(), "articles.json");
+  const filePath = path.join(process.cwd(), 'server', "articles.json");
   const { slug } = req.params;
 
   fs.readFile(filePath, "utf-8", (err, data) => {
