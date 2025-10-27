@@ -124,7 +124,7 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 
 // ✅ Route 4: Serve all articles
 app.get("/articles", (req, res) => {
-  const filePath = path.join(process.cwd(), 'server', "articles.json");
+  const filePath = path.join(process.cwd(), "articles.json");
 
   fs.readFile(filePath, "utf-8", (err, data) => {
     if (err) {
@@ -138,7 +138,7 @@ app.get("/articles", (req, res) => {
 
 // ✅ Route 5: Fetch a single article dynamically by slug
 app.get("/articles/:slug", (req, res) => {
-  const filePath = path.join(process.cwd(), 'server', "articles.json");
+  const filePath = path.join(process.cwd(), "articles.json");
   const { slug } = req.params;
 
   fs.readFile(filePath, "utf-8", (err, data) => {
