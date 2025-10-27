@@ -8,15 +8,24 @@ import fs from "fs";
 dotenv.config();
 const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-const port = 4242;
+const port = process.env.PORT || 4242;
+
+// ✅ Update this to match your Netlify frontend URL
+const allowedOrigins = [
+  'https://ahsimpledesigns.netlify.app',
+  'http://localhost:5173' // keep for local dev
+];
 
 app.use(cors({
-  origin: [
-    "http://localhost:5173",                    // for local dev
-    "ahsimpledesigns.netlify.app"       // your live frontend
-  ],
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"]
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.error('❌ CORS blocked for:', origin);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
 }));
 
 app.use(express.json());
