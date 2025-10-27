@@ -45,7 +45,7 @@ function DownloadPage() {
           <h2 className="text-2xl font-bold mb-2">✅ Payment Successful</h2>
           <p>You purchased: <strong>{templateName}</strong></p>
           <a
-            href={`http://localhost:4242/secure-download/${sessionId}`} // ✅ now defined
+            href={`https://simpledesigns.onrender.com/secure-download/${sessionId}`} // ✅ now defined
             onClick={handleDownload}
             className="mt-4 inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
           >
