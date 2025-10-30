@@ -79,25 +79,6 @@ function ArticleDetail() {
           ← Back to Articles
         </Link>
       </div>
-
-      {/* Related Articles */}
-      {related.length > 0 && (
-        <div className="mt-12 border-t pt-6">
-          <h2 className="text-2xl font-semibold mb-4">Related Articles</h2>
-          <div className="grid gap-4">
-            {related.map((rel) => (
-              <Link
-                key={rel.id}
-                to={`/articles/${rel.slug}`}
-                className="block border rounded-xl p-4 hover:shadow-md transition"
-              >
-                <h3 className="text-lg font-semibold">{rel.title}</h3>
-                <p className="text-gray-600 text-sm">{rel.excerpt}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
