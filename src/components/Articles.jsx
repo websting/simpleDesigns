@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ArticlesData from "../data/ArticlesData";
 
 function Articles() {
+  const articles = ArticlesData;  // local data, instant load
+  
   // const [articles, setArticles] = useState([]);
 
   // useEffect(() => {
