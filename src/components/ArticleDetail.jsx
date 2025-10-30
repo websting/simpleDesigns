@@ -37,9 +37,6 @@ function ArticleDetail() {
   //     });
   // }, [slug]);
 
-  if (error) {
-    return <p className="text-center text-red-500">{error}</p>;
-  }
 
   if (!article) {
     return <p className="text-center text-gray-500">Loading article...</p>;
