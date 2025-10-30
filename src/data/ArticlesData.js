@@ -1,3 +1,5 @@
+
+
 const ArticlesData = [
   {
     "id": 1,
@@ -49,3 +51,5 @@ const ArticlesData = [
     
   }
 ]
+
+export default ArticlesData;

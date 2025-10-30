@@ -28,7 +28,7 @@ app.use(cors({
   credentials: true,
 }));
 
-app.use(express.json());
+//app.use(express.json());
 
 // 
 // =============================
@@ -156,6 +156,8 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 // });
 
 //
+
+
 // =============================
 // SERVER START
 // ============================
