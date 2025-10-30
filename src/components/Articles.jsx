@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ArticlesData from "../data/ArticlesData";
 
 function Articles() {
-  const [articles, setArticles] = useState([]);
+  // const [articles, setArticles] = useState([]);
 
-  useEffect(() => {
-    fetch("https://simpledesigns.onrender.com/articles")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log("📰 Articles loaded:", data);
-        setArticles(data);
-      })
-      .catch((err) => console.error("Error fetching articles:", err));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://simpledesigns.onrender.com/articles")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log("📰 Articles loaded:", data);
+  //       setArticles(data);
+  //     })
+  //     .catch((err) => console.error("Error fetching articles:", err));
+  // }, []);
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
@@ -22,7 +23,7 @@ function Articles() {
         <p className="text-center text-gray-500">No articles yet.</p>
       ) : (
         <div className="grid gap-6">
-          {articles.map((article) => (
+          {ArticlesData.map((article) => (
             <div
               key={article.id}
               className="border rounded-2xl p-4 hover:shadow-md transition"

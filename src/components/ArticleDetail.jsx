@@ -1,35 +1,39 @@
 // src/components/ArticlePage.jsx
 import { useParams, Link } from "react-router-dom";
+import ArticlesData from "../data/ArticlesData";
 import { useEffect, useState } from "react";
 
 function ArticlePage() {
-  const { slug } = useParams();
-  const [article, setArticle] = useState(null);
-  const [related, setRelated] = useState([]);
-  const [error, setError] = useState("");
+  const { id } = useParams();
+  const article = ArticlesData.find((a) => a.id === id);
 
-  useEffect(() => {
-    // Fetch single article
-    fetch(`https://simpledesigns.onrender.com/articles/${slug}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch article");
-        return res.json();
-      })
-      .then((data) => {
-        setArticle(data);
-        // Fetch related articles (reuse all articles and filter)
-        return fetch("https://simpledesigns.onrender.com/articles");
-      })
-      .then((res) => res.json())
-      .then((all) => {
-        const others = all.filter((a) => a.slug !== slug);
-        setRelated(others.slice(0, 3)); // show up to 3
-      })
-      .catch((err) => {
-        console.error("Error loading article:", err);
-        setError("Could not load article. Please try again later.");
-      });
-  }, [slug]);
+  // const { slug } = useParams();
+  // const [article, setArticle] = useState(null);
+  // const [related, setRelated] = useState([]);
+  // const [error, setError] = useState("");
+
+  // useEffect(() => {
+  //   // Fetch single article
+  //   fetch(`https://simpledesigns.onrender.com/articles/${slug}`)
+  //     .then((res) => {
+  //       if (!res.ok) throw new Error("Failed to fetch article");
+  //       return res.json();
+  //     })
+  //     .then((data) => {
+  //       setArticle(data);
+  //       // Fetch related articles (reuse all articles and filter)
+  //       return fetch("https://simpledesigns.onrender.com/articles");
+  //     })
+  //     .then((res) => res.json())
+  //     .then((all) => {
+  //       const others = all.filter((a) => a.slug !== slug);
+  //       setRelated(others.slice(0, 3)); // show up to 3
+  //     })
+  //     .catch((err) => {
+  //       console.error("Error loading article:", err);
+  //       setError("Could not load article. Please try again later.");
+  //     });
+  // }, [slug]);
 
   if (error) {
     return <p className="text-center text-red-500">{error}</p>;
@@ -99,5 +103,5 @@ function ArticlePage() {
   );
 }
 
-export default ArticlePage;
+export default ArticleDetail;
 
