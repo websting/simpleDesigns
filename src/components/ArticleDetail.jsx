@@ -6,6 +6,7 @@ import ArticlesData from "../data/ArticlesData";
 function ArticleDetail() {
   const { slug } = useParams();
   const article = ArticlesData.find((a) => a.slug === slug);
+  
   //const { id } = useParams();
 
    

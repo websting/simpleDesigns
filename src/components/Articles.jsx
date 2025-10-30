@@ -4,7 +4,7 @@ import ArticlesData from "../data/ArticlesData";
 
 function Articles() {
   const articles = ArticlesData;  // local data, instant load
-  
+
   // const [articles, setArticles] = useState([]);
 
   // useEffect(() => {
@@ -25,7 +25,7 @@ function Articles() {
         <p className="text-center text-gray-500">No articles yet.</p>
       ) : (
         <div className="grid gap-6">
-          {ArticlesData.map((article) => (
+          {articles.map((article) => (
             <div
               key={article.id}
               className="border rounded-2xl p-4 hover:shadow-md transition"
