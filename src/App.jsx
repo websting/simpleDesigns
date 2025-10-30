@@ -13,6 +13,7 @@ import ThankYou from './components/Thank-you';
 import Footer from './components/Footer';
 import Articles from './components/Articles';
 import ArticleDetail from './components/ArticleDetail';
+import Cancel from './components/Cancel';
 
 
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/Thank-you' element={<ThankYou />} />
         <Route path='/articles' element={<Articles />} />
         <Route path="/articles/:slug" element={<ArticleDetail />} />
+        <Route path='/cancel' element={<Cancel />} />
       </Routes>
       </main>
       <Footer />
