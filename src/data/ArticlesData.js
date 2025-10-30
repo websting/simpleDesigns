@@ -30,7 +30,7 @@ const ArticlesData = [
 
       <p>💡 <em>Tip:</em> Pair Notion with your favorite design tools for a simple, visual workflow that keeps clients impressed.</p>`,
 
-    "link": "https://affiliate-link.com/tool",
+    "affiliateLink": "https://affiliate-link.com/tool",
     "date": "2025-10-19"
   },
   {
