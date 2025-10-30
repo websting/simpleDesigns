@@ -7,7 +7,7 @@ function ArticleDetail() {
   const { slug } = useParams();
   const article = ArticlesData.find((a) => a.slug === slug);
   
-  //const { id } = useParams();
+  const { id } = useParams();
 
    
   // const [article, setArticle] = useState(null);
@@ -53,7 +53,7 @@ function ArticleDetail() {
 
       {/* Article Content */}
       <div className="prose prose-lg">
-        <p>{article.content}</p>
+        dangerouslySetInnerHTML={{ __html: article.content }}
       </div>
 
       {/* Affiliate Link */}
