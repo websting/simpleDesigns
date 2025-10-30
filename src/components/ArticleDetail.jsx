@@ -1,13 +1,14 @@
 // src/components/ArticlePage.jsx
 import { useParams, Link } from "react-router-dom";
 import ArticlesData from "../data/ArticlesData";
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 
-function ArticlePage() {
-  const { id } = useParams();
-  const article = ArticlesData.find((a) => a.id === id);
+function ArticleDetail() {
+  const { slug } = useParams();
+  const article = ArticlesData.find((a) => a.slug === slug);
+  //const { id } = useParams();
 
-  // const { slug } = useParams();
+   
   // const [article, setArticle] = useState(null);
   // const [related, setRelated] = useState([]);
   // const [error, setError] = useState("");
