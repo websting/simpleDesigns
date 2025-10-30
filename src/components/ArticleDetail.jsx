@@ -1,45 +1,15 @@
-// src/components/ArticlePage.jsx
 import { useParams, Link } from "react-router-dom";
 import ArticlesData from "../data/ArticlesData";
-//import { useEffect, useState } from "react";
 
 function ArticleDetail() {
   const { slug } = useParams();
   const article = ArticlesData.find((a) => a.slug === slug);
-  
-  const { id } = useParams();
 
-   
-  // const [article, setArticle] = useState(null);
-  // const [related, setRelated] = useState([]);
-  // const [error, setError] = useState("");
-
-  // useEffect(() => {
-  //   // Fetch single article
-  //   fetch(`https://simpledesigns.onrender.com/articles/${slug}`)
-  //     .then((res) => {
-  //       if (!res.ok) throw new Error("Failed to fetch article");
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       setArticle(data);
-  //       // Fetch related articles (reuse all articles and filter)
-  //       return fetch("https://simpledesigns.onrender.com/articles");
-  //     })
-  //     .then((res) => res.json())
-  //     .then((all) => {
-  //       const others = all.filter((a) => a.slug !== slug);
-  //       setRelated(others.slice(0, 3)); // show up to 3
-  //     })
-  //     .catch((err) => {
-  //       console.error("Error loading article:", err);
-  //       setError("Could not load article. Please try again later.");
-  //     });
-  // }, [slug]);
-
+  // ✅ Define simple "related" articles from local data
+  const related = ArticlesData.filter((a) => a.slug !== slug).slice(0, 3);
 
   if (!article) {
-    return <p className="text-center text-gray-500">Loading article...</p>;
+    return <p className="text-center text-gray-500">Article not found.</p>;
   }
 
   return (
@@ -49,9 +19,10 @@ function ArticleDetail() {
       <p className="text-gray-500 mb-6">{article.date}</p>
 
       {/* Article Content */}
-      <div className="prose prose-lg">
+      <div
+        className="prose prose-lg"
         dangerouslySetInnerHTML={{ __html: article.content }}
-      </div>
+      />
 
       {/* Affiliate Link */}
       {article.affiliateLink && (
@@ -79,9 +50,29 @@ function ArticleDetail() {
           ← Back to Articles
         </Link>
       </div>
+
+      {/* Related Articles */}
+      {related.length > 0 && (
+        <div className="mt-12 border-t pt-6">
+          <h2 className="text-2xl font-semibold mb-4">Related Articles</h2>
+          <div className="grid gap-4">
+            {related.map((rel) => (
+              <Link
+                key={rel.id}
+                to={`/articles/${rel.slug}`}
+                className="block border rounded-xl p-4 hover:shadow-md transition"
+              >
+                <h3 className="text-lg font-semibold">{rel.title}</h3>
+                <p className="text-gray-600 text-sm">{rel.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default ArticleDetail;
+
 
