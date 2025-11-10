@@ -4,42 +4,48 @@ import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
 import fs from "fs";
-
-const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
-const templates = JSON.parse(fs.readFileSync(templatesPath, "utf-8"));
-
+import url from "url";
 
 dotenv.config();
+
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Correct path to your JSON file (one level up from server folder)
+const templatesPath = path.join(__dirname, "..", "public", "data", "images.json");
+const templates = JSON.parse(fs.readFileSync(templatesPath, "utf-8"));
+
 const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 4242;
 
-// ✅ Allow frontend origins
+// Allowed origins for CORS
 const allowedOrigins = [
-  'https://ahsimpledesigns.netlify.app',
-  'http://localhost:5173' // keep for local dev
+  "https://ahsimpledesigns.netlify.app",
+  "http://localhost:5173", // local dev
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      console.error('❌ CORS blocked for:', origin);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.error("❌ CORS blocked for:", origin);
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
-// 
 // =============================
-// STRIPE ROUTES                
+// STRIPE ROUTES
 // =============================
 
-// ✅ Route 1: Create checkout session
+// Route 1: Create checkout session
 app.post("/create-checkout-session", async (req, res) => {
   const { templateName, priceId } = req.body;
 
@@ -68,7 +74,7 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-// ✅ Route 2: Retrieve checkout session for verification
+// Route 2: Retrieve checkout session for verification
 app.get("/checkout-session/:sessionId", async (req, res) => {
   const { sessionId } = req.params;
 
@@ -87,7 +93,7 @@ app.get("/checkout-session/:sessionId", async (req, res) => {
   }
 });
 
-// ✅ Route 3: Secure download route
+// Route 3: Secure download route
 app.get("/secure-download/:sessionId", async (req, res) => {
   try {
     const { sessionId } = req.params;
@@ -102,31 +108,32 @@ app.get("/secure-download/:sessionId", async (req, res) => {
       return res.status(400).json({ error: "Template information missing." });
     }
 
-// ✅ Find matching template
-const template = templates.find(t => t.title === templateName);
+    // Find matching template
+    const template = templates.find((t) => t.title === templateName);
 
-if (!template) {
-  console.error("❌ Template not found for:", templateName);
-  console.log("Available template titles:", templates.map(t => t.title));
-  return res.status(404).json({ error: "Template not found in template list." });
-}
+    if (!template) {
+      console.error("❌ Template not found for:", templateName);
+      console.log("Available template titles:", templates.map((t) => t.title));
+      return res.status(404).json({ error: "Template not found in template list." });
+    }
 
-const fileName = template.fileName || `${templateName}.zip`;
-const filePath = path.join(process.cwd(), "downloads", fileName);
+    // Use the correct path to downloads (inside /server/downloads)
+    const fileName = template.fileName || `${templateName}.zip`;
+    const filePath = path.join(__dirname, "downloads", fileName);
 
-console.log("🔍 Checking path:", filePath);
+    console.log("🔍 Checking path:", filePath);
 
-if (!fs.existsSync(filePath)) {
-  console.error("❌ File missing at:", filePath);
-  return res.status(404).json({ error: "File not found on server." });
-}
+    if (!fs.existsSync(filePath)) {
+      console.error("❌ File missing at:", filePath);
+      return res.status(404).json({ error: "File not found on server." });
+    }
 
-res.download(filePath, fileName, (err) => {
-  if (err) {
-    console.error("Download failed:", err);
-    res.status(500).json({ error: "File download failed." });
-  }
-});
+    res.download(filePath, fileName, (err) => {
+      if (err) {
+        console.error("Download failed:", err);
+        res.status(500).json({ error: "File download failed." });
+      }
+    });
   } catch (err) {
     console.error("Error in secure download route:", err);
     res.status(500).json({ error: "Something went wrong while verifying payment." });
@@ -135,7 +142,7 @@ res.download(filePath, fileName, (err) => {
 
 // =============================
 // SERVER START
-// ============================
+// =============================
 
 app.listen(port, () => {
   console.log(`🚀 Stripe server listening at http://localhost:${port}`);
