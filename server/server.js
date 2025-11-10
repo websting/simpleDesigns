@@ -5,7 +5,8 @@ import dotenv from "dotenv";
 import path from "path";
 import fs from "fs";
 
-import templates from "../public/data/images.json" assert { type: "json" };
+const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
+const templates = JSON.parse(fs.readFileSync(templatesPath, "utf-8"));
 
 
 dotenv.config();
