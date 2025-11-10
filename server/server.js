@@ -10,26 +10,10 @@ const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 4242;
 
-// --------------------
-// Load templates safely
-// --------------------
-const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
-let templates = [];
-
-try {
-  const data = fs.readFileSync(templatesPath, "utf-8");
-  templates = JSON.parse(data);
-  console.log(`✅ Loaded ${templates.length} templates from ${templatesPath}`);
-} catch (err) {
-  console.error("❌ Failed to load templates:", err.message);
-}
-
-// --------------------
-// CORS setup
-// --------------------
+// ✅ Allow frontend origins
 const allowedOrigins = [
   'https://ahsimpledesigns.netlify.app',
-  'http://localhost:5173'
+  'http://localhost:5173' // keep for local dev
 ];
 
 app.use(cors({
@@ -47,12 +31,28 @@ app.use(cors({
 app.use(express.json());
 
 // =============================
-// STRIPE ROUTES
+// Load templates
+// =============================
+const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
+
+let templates = [];
+try {
+  const data = fs.readFileSync(templatesPath, "utf-8");
+  templates = JSON.parse(data);
+  console.log(`✅ Loaded ${templates.length} templates from images.json`);
+} catch (err) {
+  console.error("❌ Failed to load templates:", err);
+}
+
+// =============================
+// STRIPE ROUTES                
 // =============================
 
-// Create checkout session
+// Route 1: Create checkout session
 app.post("/create-checkout-session", async (req, res) => {
   const { templateName, priceId } = req.body;
+  console.log("📦 Incoming checkout request:", { templateName, priceId });
+
   if (!priceId) return res.status(400).json({ error: "Missing priceId" });
 
   try {
@@ -73,7 +73,7 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-// Retrieve checkout session
+// Route 2: Retrieve checkout session
 app.get("/checkout-session/:sessionId", async (req, res) => {
   const { sessionId } = req.params;
 
@@ -92,7 +92,7 @@ app.get("/checkout-session/:sessionId", async (req, res) => {
   }
 });
 
-// Secure download
+// Route 3: Secure download
 app.get("/secure-download/:sessionId", async (req, res) => {
   try {
     const { sessionId } = req.params;
@@ -103,9 +103,9 @@ app.get("/secure-download/:sessionId", async (req, res) => {
     }
 
     const templateName = session.metadata?.template;
-    if (!templateName) return res.status(400).json({ error: "Template information missing." });
+    if (!templateName) return res.status(400).json({ error: "Template info missing." });
 
-    // Find template by title
+    // Find template in images.json
     const template = templates.find(t => t.title === templateName);
     if (!template) {
       console.error("❌ Template not found for:", templateName);
@@ -114,19 +114,22 @@ app.get("/secure-download/:sessionId", async (req, res) => {
     }
 
     const fileName = template.fileName || `${templateName}.zip`;
-    const filePath = path.join(process.cwd(), "server", "downloads", "zips", fileName);
+    const filePath = path.join(process.cwd(), "server", "downloads", fileName);
+
+    console.log("🔍 Checking path:", filePath);
 
     if (!fs.existsSync(filePath)) {
       console.error("❌ File missing at:", filePath);
       return res.status(404).json({ error: "File not found on server." });
     }
 
-    res.download(filePath, fileName, err => {
+    res.download(filePath, fileName, (err) => {
       if (err) {
         console.error("Download failed:", err);
         res.status(500).json({ error: "File download failed." });
       }
     });
+
   } catch (err) {
     console.error("Error in secure download route:", err);
     res.status(500).json({ error: "Something went wrong while verifying payment." });
