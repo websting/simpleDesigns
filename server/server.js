@@ -5,6 +5,9 @@ import dotenv from "dotenv";
 import path from "path";
 import fs from "fs";
 
+import templates from "../public/data/images.json" assert { type: "json" };
+
+
 dotenv.config();
 const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -102,16 +105,18 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 const template = templates.find(t => t.title === templateName);
 
 if (!template) {
+  console.error("❌ Template not found for:", templateName);
+  console.log("Available template titles:", templates.map(t => t.title));
   return res.status(404).json({ error: "Template not found in template list." });
 }
 
-// ✅ Use the fileName property if it exists, otherwise default to title.zip
 const fileName = template.fileName || `${templateName}.zip`;
 const filePath = path.join(process.cwd(), "downloads", fileName);
 
 console.log("🔍 Checking path:", filePath);
 
 if (!fs.existsSync(filePath)) {
+  console.error("❌ File missing at:", filePath);
   return res.status(404).json({ error: "File not found on server." });
 }
 
