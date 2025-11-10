@@ -5,32 +5,15 @@ import dotenv from "dotenv";
 import path from "path";
 import fs from "fs";
 
-// Load environment variables
 dotenv.config();
-
 const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 4242;
 
-// =============================
-// Load templates JSON
-// =============================
-const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
-let templates = [];
-
-try {
-  templates = JSON.parse(fs.readFileSync(templatesPath, "utf-8"));
-  console.log(`✅ Loaded ${templates.length} templates from images.json`);
-} catch (err) {
-  console.error("❌ Failed to load templates:", err.message);
-}
-
-// =============================
-// CORS Setup
-// =============================
+// ✅ Allow frontend origins
 const allowedOrigins = [
   'https://ahsimpledesigns.netlify.app',
-  'http://localhost:5173' // keep for local dev
+  'http://localhost:5173'
 ];
 
 app.use(cors({
@@ -47,17 +30,29 @@ app.use(cors({
 
 app.use(express.json());
 
+// Load templates safely
+let templates = [];
+const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
+try {
+  templates = JSON.parse(fs.readFileSync(templatesPath, "utf-8"));
+  console.log(`✅ Loaded ${templates.length} templates from images.json`);
+} catch (err) {
+  console.error(`❌ Failed to load templates: ${err.message}`);
+}
+
 // =============================
-// Stripe Routes
+// STRIPE ROUTES                
 // =============================
 
-// Create checkout session
+// Route 1: Create checkout session
 app.post("/create-checkout-session", async (req, res) => {
   const { templateName, priceId } = req.body;
 
   console.log("📦 Incoming checkout request:", { templateName, priceId });
 
-  if (!priceId) return res.status(400).json({ error: "Missing priceId" });
+  if (!priceId) {
+    return res.status(400).json({ error: "Missing priceId" });
+  }
 
   try {
     const session = await stripe.checkout.sessions.create({
@@ -77,13 +72,13 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-// Retrieve checkout session for verification
+// Route 2: Retrieve checkout session
 app.get("/checkout-session/:sessionId", async (req, res) => {
   const { sessionId } = req.params;
 
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    const template = session.metadata?.template;
+    const template = session.metadata.template;
 
     if (session.payment_status === "paid") {
       res.json({ template });
@@ -96,7 +91,7 @@ app.get("/checkout-session/:sessionId", async (req, res) => {
   }
 });
 
-// Secure download route
+// Route 3: Secure download
 app.get("/secure-download/:sessionId", async (req, res) => {
   try {
     const { sessionId } = req.params;
@@ -109,7 +104,6 @@ app.get("/secure-download/:sessionId", async (req, res) => {
     const templateName = session.metadata?.template;
     if (!templateName) return res.status(400).json({ error: "Template information missing." });
 
-    // Find template by title
     const template = templates.find(t => t.title === templateName);
     if (!template) {
       console.error("❌ Template not found for:", templateName);
@@ -117,22 +111,20 @@ app.get("/secure-download/:sessionId", async (req, res) => {
       return res.status(404).json({ error: "Template not found in template list." });
     }
 
-    const fileName = template.fileName;
-    const filePath = path.join(process.cwd(), "downloads", fileName);
+    const fileName = template.fileName || `${templateName}.zip`;
+    const filePath = path.join(process.cwd(), "server", "downloads", "zipfiles", fileName);
 
     if (!fs.existsSync(filePath)) {
       console.error("❌ File missing at:", filePath);
       return res.status(404).json({ error: "File not found on server." });
     }
 
-    console.log("🔍 Serving file:", fileName);
     res.download(filePath, fileName, (err) => {
       if (err) {
-        console.error("❌ Download failed:", err);
+        console.error("Download failed:", err);
         res.status(500).json({ error: "File download failed." });
       }
     });
-
   } catch (err) {
     console.error("Error in secure download route:", err);
     res.status(500).json({ error: "Something went wrong while verifying payment." });
@@ -140,7 +132,7 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 });
 
 // =============================
-// Start server
+// SERVER START
 // =============================
 app.listen(port, () => {
   console.log(`🚀 Stripe server listening at http://localhost:${port}`);
