@@ -33,7 +33,7 @@ app.use(express.json());
 // =============================
 // Load templates
 // =============================
-const templatesPath = path.join(process.cwd(), "public", "data", "images.json");
+const templatesPath = path.join(process.cwd(), "..", "public", "data", "images.json");
 
 let templates = [];
 try {
@@ -114,7 +114,8 @@ app.get("/secure-download/:sessionId", async (req, res) => {
     }
 
     const fileName = template.fileName || `${templateName}.zip`;
-    const filePath = path.join(process.cwd(), "server", "downloads", fileName);
+    const filePath = path.join(process.cwd(), "downloads", fileName);
+
 
     console.log("🔍 Checking path:", filePath);
 
