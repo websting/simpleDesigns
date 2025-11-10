@@ -1,5 +1,9 @@
 [
   {
+    "_comment": "File contains an array of image template objects with their details."
+  },
+
+  {
     "public_id": "ahtml-dog-sitter_tzftkl",
     "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1756561471/ahtml-dog-sitter_tzftkl.png",
     "title": "Dog Sitter Template",
@@ -47,6 +51,7 @@
     "credits": "Image place holder by Unsplash. Image Storage API by Cloudinary.",
     "liveDemo": "https://ahtml-portfolio.netlify.app/",
     "price": "29.99",
+    "priceId": "price_1SRxoiBqWU8yVEMvGmijqD63",
     "features": [
       {
         "title": "Responsive Design",

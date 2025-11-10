@@ -117,47 +117,6 @@ app.get("/secure-download/:sessionId", async (req, res) => {
   }
 });
 
-//
-// =================================
-// ARTICLE ROUTES
-// ===================================
-
-// ✅ Route 4: Serve all articles
-// app.get("/articles", (req, res) => {
-//   const filePath = path.join(process.cwd(), "articles.json");
-
-//   fs.readFile(filePath, "utf-8", (err, data) => {
-//     if (err) {
-//       console.error("Error reading articles:", err);
-//       return res.status(500).json({ error: "Unable to load articles." });
-//     }
-
-//     res.json(JSON.parse(data));
-//   });
-// });
-
-// // ✅ Route 5: Fetch a single article dynamically by slug
-// app.get("/articles/:slug", (req, res) => {
-//   const filePath = path.join(process.cwd(), "articles.json");
-//   const { slug } = req.params;
-
-//   fs.readFile(filePath, "utf-8", (err, data) => {
-//     if (err) return res.status(500).json({ error: "Unable to load article." });
-
-//     const articles = JSON.parse(data);
-//     const article = articles.find((a) => a.slug === slug);
-
-//     if (!article) {
-//       return res.status(404).json({ error: "Article not found." });
-//     }
-
-//     res.json(article);
-//   });
-// });
-
-//
-
-
 // =============================
 // SERVER START
 // ============================
