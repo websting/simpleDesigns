@@ -98,19 +98,29 @@ app.get("/secure-download/:sessionId", async (req, res) => {
       return res.status(400).json({ error: "Template information missing." });
     }
 
-    const filePath = path.join(process.cwd(), "downloads", `${templateName}.zip`);
-    console.log("🔍 Checking path:", filePath);
+// ✅ Find matching template
+const template = templates.find(t => t.title === templateName);
 
-    if (!fs.existsSync(filePath)) {
-      return res.status(404).json({ error: "File not found on server." });
-    }
+if (!template) {
+  return res.status(404).json({ error: "Template not found in template list." });
+}
 
-    res.download(filePath, `${templateName}.zip`, (err) => {
-      if (err) {
-        console.error("Download failed:", err);
-        res.status(500).json({ error: "File download failed." });
-      }
-    });
+// ✅ Use the fileName property if it exists, otherwise default to title.zip
+const fileName = template.fileName || `${templateName}.zip`;
+const filePath = path.join(process.cwd(), "downloads", fileName);
+
+console.log("🔍 Checking path:", filePath);
+
+if (!fs.existsSync(filePath)) {
+  return res.status(404).json({ error: "File not found on server." });
+}
+
+res.download(filePath, fileName, (err) => {
+  if (err) {
+    console.error("Download failed:", err);
+    res.status(500).json({ error: "File download failed." });
+  }
+});
   } catch (err) {
     console.error("Error in secure download route:", err);
     res.status(500).json({ error: "Something went wrong while verifying payment." });

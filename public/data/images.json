@@ -1,9 +1,4 @@
-[
-  {
-    "_comment": "File contains an array of image template objects with their details."
-  },
-
-  {
+[  {
     "public_id": "ahtml-dog-sitter_tzftkl",
     "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1756561471/ahtml-dog-sitter_tzftkl.png",
     "title": "Dog Sitter Template",
@@ -13,6 +8,7 @@
     "liveDemo": "https://ahtml-dog-sitter.netlify.app/",
     "price": "24.99",
     "priceId": "price_1SIfmsBqWU8yVEMvlTLSGK9y",
+    "fileName": "dog-sitter-download.zip",
     "features": [
       {
         "title": "Responsive Design",
@@ -52,6 +48,7 @@
     "liveDemo": "https://ahtml-portfolio.netlify.app/",
     "price": "29.99",
     "priceId": "price_1SRxoiBqWU8yVEMvGmijqD63",
+    "fileName": "devkit-download.zip",
     "features": [
       {
         "title": "Responsive Design",
@@ -106,6 +103,8 @@
     "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
     "liveDemo": "https://ahtml-piano-coach-template.netlify.app/",
     "price": "24.99",
+    "priceId": "price_1SIfnABqWU8yVEMvYJH6q3eD",
+    "fileName": "piano-coach-download.zip",
     "features": [
       {
         "title": "Responsive Design",
