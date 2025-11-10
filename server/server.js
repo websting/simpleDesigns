@@ -6,9 +6,21 @@ import path from "path";
 import fs from "fs";
 
 dotenv.config();
+
 const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const port = process.env.PORT || 4242;
+
+// ✅ Load templates from correct path
+const templatesPath = path.join(process.cwd(), "..", "public", "data", "images.json");
+let templates = [];
+
+try {
+  templates = JSON.parse(fs.readFileSync(templatesPath, "utf-8"));
+  console.log("✅ Loaded templates:", templates.map(t => t.title));
+} catch (err) {
+  console.error("❌ Failed to load templates:", err);
+}
 
 // ✅ Allow frontend origins
 const allowedOrigins = [
@@ -29,20 +41,6 @@ app.use(cors({
 }));
 
 app.use(express.json());
-
-// =============================
-// Load templates
-// =============================
-const templatesPath = path.join(process.cwd(), "..", "public", "data", "images.json");
-
-let templates = [];
-try {
-  const data = fs.readFileSync(templatesPath, "utf-8");
-  templates = JSON.parse(data);
-  console.log(`✅ Loaded ${templates.length} templates from images.json`);
-} catch (err) {
-  console.error("❌ Failed to load templates:", err);
-}
 
 // =============================
 // STRIPE ROUTES                
@@ -76,7 +74,6 @@ app.post("/create-checkout-session", async (req, res) => {
 // Route 2: Retrieve checkout session
 app.get("/checkout-session/:sessionId", async (req, res) => {
   const { sessionId } = req.params;
-
   try {
     const session = await stripe.checkout.sessions.retrieve(sessionId);
     const template = session.metadata.template;
@@ -103,10 +100,11 @@ app.get("/secure-download/:sessionId", async (req, res) => {
     }
 
     const templateName = session.metadata?.template;
-    if (!templateName) return res.status(400).json({ error: "Template info missing." });
+    if (!templateName) return res.status(400).json({ error: "Template information missing." });
 
-    // Find template in images.json
+    // ✅ Find template
     const template = templates.find(t => t.title === templateName);
+
     if (!template) {
       console.error("❌ Template not found for:", templateName);
       console.log("Available template titles:", templates.map(t => t.title));
@@ -115,9 +113,6 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 
     const fileName = template.fileName || `${templateName}.zip`;
     const filePath = path.join(process.cwd(), "downloads", fileName);
-
-
-    console.log("🔍 Checking path:", filePath);
 
     if (!fs.existsSync(filePath)) {
       console.error("❌ File missing at:", filePath);
@@ -143,6 +138,7 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 app.listen(port, () => {
   console.log(`🚀 Stripe server listening at http://localhost:${port}`);
 });
+
 
 
 
