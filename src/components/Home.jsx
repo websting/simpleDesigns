@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       {/* Header / Title */}
       <div className="text-center py-10 px-4">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+        <h1 className="font-Audiowide text-3xl sm:text-4xl text-gray-800 mb-2">
           Website Starter Templates for Developers, Designers & Freelancers
         </h1>
         <p className="text-gray-500 text-md max-w-xl mx-auto">

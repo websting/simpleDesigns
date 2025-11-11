@@ -19,7 +19,7 @@ function Articles() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-center">Web Development Articles</h1>
+      <h1 className="font-Audiowide text-3xl sm:text-4xl text-gray-800 text-center mb-4">Web Development Articles</h1>
 
       {articles.length === 0 ? (
         <p className="text-center text-gray-500">No articles yet.</p>
@@ -30,7 +30,7 @@ function Articles() {
               key={article.id}
               className="border rounded-2xl p-4 hover:shadow-md transition"
             >
-              <h2 className="text-xl font-semibold mb-2">{article.title}</h2>
+              <h2 className="text-lg text-gray-700 mb-2">{article.title}</h2>
               <p className="text-gray-600 mb-3">{article.excerpt}</p>
 
               <div className="flex gap-3">

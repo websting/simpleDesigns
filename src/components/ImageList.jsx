@@ -38,7 +38,7 @@ const ImageList = () => {
 
               {/* Text content */}
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{template.title}</h3>
+                <h3 className="text-lg  text-gray-700">{template.title}</h3>
                 <p className="text-sm text-gray-500 line-clamp-2">
                   {template.description || "A modern responsive template."}
                 </p>

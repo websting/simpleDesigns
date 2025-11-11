@@ -75,7 +75,7 @@ if (error) {
     <div className="bg-white min-h-screen pt-10 px-4 sm:px-6 lg:px-20">
       {/* Tweak image size as needed */}
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-center text-gray-800 mb-10">
+        <h1 className="font-Audiowide text-3xl sm:text-4xl text-gray-800 text-center mb-5">
           {template.title}
         </h1>
 

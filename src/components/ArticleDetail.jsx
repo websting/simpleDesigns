@@ -15,7 +15,7 @@ function ArticleDetail() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
       {/* Article Header */}
-      <h1 className="text-3xl font-bold mb-4">{article.title}</h1>
+      <h1 className="font-Audiowide text-3xl sm:text-4xl text-gray-800 text-center mb-4">{article.title}</h1>
       <p className="text-gray-500 mb-6">{article.date}</p>
 
       {/* Article Content */}
@@ -54,7 +54,7 @@ function ArticleDetail() {
       {/* Related Articles */}
       {related.length > 0 && (
         <div className="mt-12 border-t pt-6">
-          <h2 className="text-2xl font-semibold mb-4">Related Articles</h2>
+          <h2 className="text-2xl mb-4">Related Articles</h2>
           <div className="grid gap-4">
             {related.map((rel) => (
               <Link
@@ -62,7 +62,7 @@ function ArticleDetail() {
                 to={`/articles/${rel.slug}`}
                 className="block border rounded-xl p-4 hover:shadow-md transition"
               >
-                <h3 className="text-lg font-semibold">{rel.title}</h3>
+                <h3 className="text-lg">{rel.title}</h3>
                 <p className="text-gray-600 text-sm">{rel.excerpt}</p>
               </Link>
             ))}
