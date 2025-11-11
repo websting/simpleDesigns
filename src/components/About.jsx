@@ -9,7 +9,7 @@ const About = () => {
 
       <p className="mb-4 text-lg leading-relaxed">
         At <span className="font-semibold">simpleDesigns</span>, we believe that great design shouldn't slow down development.
-        Founded with tech-savvy developers in mind, our mission is simple:
+        Founded with tech-savies in mind, our mission is simple:
         <span className="italic"> to help you build faster by handling the front-end design for you.</span>
       </p>
 
@@ -36,7 +36,7 @@ const About = () => {
     className="w-16 h-16 rounded-full object-center shadow"
   />
   <p className="text-lg leading-relaxed">
-    Hi! I'm the solo creator behind simpleDesigns — a developer who knows how time-consuming front-end work can be when all you want is to focus on functionality.
+    Hi! I'm the solo creator behind simpleDesigns — a self thought developer who knows how time-consuming front-end work can be when all you want is to focus on functionality.
     I built this platform to make your dev process smoother by offering templates that are clean, fast, and easy to integrate.
   </p>
 </div>

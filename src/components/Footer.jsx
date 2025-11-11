@@ -1,22 +1,31 @@
 import { Facebook, Twitter, Instagram, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-8 mt-10 flex ">
+    <footer className="bg-gray-900 text-gray-400 py-8 mt-10 flex ">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         
         {/* Left Section - Brand & Copy */}
         <div className="text-center md:text-left">
-          <h2 className="text-lg font-semibold text-white">MyWebsite</h2>
-          <p className="text-sm mt-1">&copy; {new Date().getFullYear()} MyWebsite. All rights reserved.</p>
+          <p className="text-lg font-semibold text-white">The home of simplicity</p>
+          <p className="text-xs mt-1">&copy; {new Date().getFullYear()} simpleDesigns. All rights reserved.</p>
         </div>
 
         {/* Middle Section - Links */}
-        <div className="flex space-x-6">
-          <a href="#home" className="hover:text-white transition">Home</a>
-          <a href="#about" className="hover:text-white transition">About</a>
-          <a href="#services" className="hover:text-white transition">Services</a>
-          <a href="#contact" className="hover:text-white transition">Contact</a>
+        <div className="list-none flex space-x-6">
+          <Link to="/">
+            <li className="cursor-pointer hover:text-gray-500">Home</li>
+          </Link>
+          <Link to="/about">
+            <li className="cursor-pointer hover:text-gray-500">About</li>
+          </Link>
+          <Link to="/blog">
+            <li className="cursor-pointer hover:text-gray-500">Blog</li>
+          </Link>
+          <Link to="/articles">
+            <li className="cursor-pointer hover:text-gray-500">Articles</li>
+          </Link>
         </div>
 
         {/* Right Section - Social Icons */}
