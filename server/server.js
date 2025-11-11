@@ -104,22 +104,25 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 
     // ✅ Find template
     const template = templates.find(t => t.title === templateName);
-
     if (!template) {
       console.error("❌ Template not found for:", templateName);
       console.log("Available template titles:", templates.map(t => t.title));
       return res.status(404).json({ error: "Template not found in template list." });
     }
 
+    // ✅ Fix: case-insensitive lookup for actual zip file
     const fileName = template.fileName || `${templateName}.zip`;
-    const filePath = path.join(process.cwd(), "downloads", fileName);
+    const downloadsDir = path.join(process.cwd(), "downloads");
+    const files = fs.readdirSync(downloadsDir);
+    const realFile = files.find(f => f.toLowerCase() === fileName.toLowerCase());
 
-    if (!fs.existsSync(filePath)) {
-      console.error("❌ File missing at:", filePath);
+    if (!realFile) {
+      console.error("❌ File missing at:", path.join(downloadsDir, fileName));
       return res.status(404).json({ error: "File not found on server." });
     }
 
-    res.download(filePath, fileName, (err) => {
+    const filePath = path.join(downloadsDir, realFile);
+    res.download(filePath, realFile, (err) => {
       if (err) {
         console.error("Download failed:", err);
         res.status(500).json({ error: "File download failed." });
@@ -138,6 +141,7 @@ app.get("/secure-download/:sessionId", async (req, res) => {
 app.listen(port, () => {
   console.log(`🚀 Stripe server listening at http://localhost:${port}`);
 });
+
 
 
 
