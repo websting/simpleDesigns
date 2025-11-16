@@ -106,7 +106,7 @@ function ArticleDetail() {
 
         {/* Desktop Aside Section */}
         <aside className="w-full lg:w-64 flex-shrink-0 hidden lg:block">
-          <div className="border rounded-xl p-4 shadow-sm bg-white text-center">
+          <div className="border rounded-xl p-4 mt-60 shadow-sm bg-white text-center">
             <h3 className="font-semibold mb-3">Sponsored</h3>
             {article.sidebarBannerHtml && (
               <div

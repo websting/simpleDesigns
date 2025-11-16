@@ -4,12 +4,33 @@ const ArticlesData = [
     slug: "whc-hosting-cta",
     title: "Fast, Secure Canadian Web Hosting – WHC",
     excerpt:
-      "Fast & Secure Canadian Web Hosting. Ideal for beginnners, entrepreneurs, and small businesses.",
+      "Fast & Secure Canadian Web Hosting. Ideal for beginners, entrepreneurs, and small businesses.",
     link: "/articles/whc-cta",
     content: `
         <section class="cta-block">
             <h2>🚀 Ready to Launch Your Website?</h2>
-            <p><strong>WHC (Web Hosting Canada)</strong> offers fast, secure Canadian web hosting with free SSL certificates, 1-click WordPress installation, and 24/7 expert support — perfect for beginners, entrepreneurs, and small businesses in 2025.</p>
+
+            <p>
+              <strong>WHC (Web Hosting Canada)</strong> is Canada’s top web hosting provider offering fast, secure servers, free SSL certificates, 1-click WordPress installation, and 24/7 expert support — perfect for beginners, entrepreneurs, and small businesses in 2025.
+            </p><br/>
+
+            <h3>🔥 Why Choose WHC?</h3>
+            <ul>
+              <li>🇨🇦 100% Canadian servers for faster local performance</li>
+              <li>🔐 Free SSL included with all plans</li>
+              <li>⚡ Optimized for fast loading and SEO-friendly websites</li>
+              <li>🛠️ One-click WordPress installation</li>
+              <li>📞 24/7 Canadian-based support</li>
+              <li>💰 Affordable plans for small businesses and freelancers</li>
+            </ul><br/>
+
+            <h3>🌐 Perfect For:</h3>
+            <ul>
+              <li>Freelancers and designers building client websites</li>
+              <li>Small business websites</li>
+              <li>Personal blogs and portfolios</li>
+              <li>WordPress websites and new ecommerce stores</li>
+            </ul>
 
             <div class="cta-wrapper">
                 <a
@@ -17,16 +38,15 @@ const ArticlesData = [
                   target="_blank"
                   rel="noopener noreferrer"
                   className="atc-button inline-block px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
->
-                    🛒 Get started today with WHC’s
+                >
+                    🛒 Get started today with WHC
                 </a>
-                <small>affordable plans and reliable servers!</small>
+                <small>Fast, secure Canadian servers • Free SSL • 24/7 Support</small>
             </div>
         </section>
     `,
     affiliateLink: "https://clients.whc.ca/aff.php?aff=7398",
 
-    // ⭐ Sidebar banner for WHC
     sidebarBannerHtml: `
       <a href="https://whc.ca/canadian-web-hosting?aff=7398" 
          target="_blank" 
