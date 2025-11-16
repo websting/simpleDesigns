@@ -5,21 +5,9 @@ import ArticlesData from "../data/ArticlesData";
 function Articles() {
   const articles = ArticlesData;  // local data, instant load
 
-  // const [articles, setArticles] = useState([]);
-
-  // useEffect(() => {
-  //   fetch("https://simpledesigns.onrender.com/articles")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log("📰 Articles loaded:", data);
-  //       setArticles(data);
-  //     })
-  //     .catch((err) => console.error("Error fetching articles:", err));
-  // }, []);
-
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="font-Audiowide text-3xl sm:text-4xl text-gray-800 text-center mb-4">Web Development Articles</h1>
+      <h1 className="font-Audiowide text-3xl sm:text-4xl text-gray-800 text-center mb-4">Recomended Tools & Resources</h1>
 
       {articles.length === 0 ? (
         <p className="text-center text-gray-500">No articles yet.</p>
@@ -36,9 +24,9 @@ function Articles() {
               <div className="flex gap-3">
                 <Link
                   to={`/articles/${article.slug}`}
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-blue-600 font-medium hover:text-indigo-800"
                 >
-                  Read More
+                  Read More →
                 </Link>
                 {/* May want removed */}
                 {article.affiliateLink && (
@@ -46,9 +34,9 @@ function Articles() {
                     href={article.affiliateLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-600 font-medium hover:underline"
+                    className="text-green-600 font-medium hover:text-yellow-800"
                   >
-                    Recommended Tool →
+                  Explore Our Partner’s Website 
                   </a>
                 )}
               </div>

@@ -32,7 +32,7 @@ const Navbar = () => {
             <li className="cursor-pointer hover:text-gray-500">Blog</li>
           </Link>
           <Link to="/articles">
-            <li className="cursor-pointer hover:text-gray-500">Articles</li>
+            <li className="cursor-pointer hover:text-gray-500">Partners</li>
           </Link>
         </ul>
         {/* button hide on small device*/}
