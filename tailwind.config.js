@@ -3,7 +3,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        audiowide: ['Audiowide', 'sans-serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
     },
   },

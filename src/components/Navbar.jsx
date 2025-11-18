@@ -31,8 +31,8 @@ const Navbar = () => {
           <Link to="/blog">
             <li className="cursor-pointer hover:text-gray-500">Blog</li>
           </Link>
-          <Link to="/articles">
-            <li className="cursor-pointer hover:text-gray-500">Partners</li>
+          <Link to="/web-hosting">
+            <li className="cursor-pointer hover:text-gray-500">Web-Hosting</li>
           </Link>
         </ul>
         {/* button hide on small device*/}

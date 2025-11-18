@@ -23,10 +23,10 @@ const BlogDetail = () => {
         ← Back to Blog
       </Link>
       <img src={post.image} alt={post.title} className="rounded-lg mb-6 w-full h-64 object-cover" />
-      <h1 className="font-Audiowide text-3xl text-gray-800 text-center mb-4">{post.title}</h1>
+      <h1 className="text-2xl font-extrabold text-center mb-4">{post.title}</h1>
       <p className="text-gray-500 mb-6">{post.date}</p>
       <div
-        className="text-gray-700 space-y-4 leading-relaxed"
+        className="text-gray-500 space-y-4 leading-relaxed "
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </div>

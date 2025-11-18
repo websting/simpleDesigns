@@ -11,9 +11,9 @@ import Blog from './components/Blog';
 import BlogDetail from './components/BlogDetail';
 import ThankYou from './components/Thank-you';
 import Footer from './components/Footer';
-import Articles from './components/Articles';
-import ArticleDetail from './components/ArticleDetail';
 import Cancel from './components/Cancel';
+import WebHosting from './components/WebHosting';
+
 
 
 
@@ -39,9 +39,8 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route path='/blog/:slug' element={<BlogDetail />} />
         <Route path='/Thank-you' element={<ThankYou />} />
-        <Route path='/articles' element={<Articles />} />
-        <Route path="/articles/:slug" element={<ArticleDetail />} />
         <Route path='/cancel' element={<Cancel />} />
+        <Route path='/web-hosting' element={<WebHosting />} />
       </Routes>
       </main>
       <Footer />
