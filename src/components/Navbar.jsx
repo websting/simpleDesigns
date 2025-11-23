@@ -25,14 +25,15 @@ const Navbar = () => {
           <Link to="/">
             <li className="cursor-pointer hover:text-gray-500">Home</li>
           </Link>
-          <Link to="/about">
-            <li className="cursor-pointer hover:text-gray-500">About</li>
-          </Link>
+          
           <Link to="/blog">
             <li className="cursor-pointer hover:text-gray-500">Blog</li>
           </Link>
-          <Link to="/web-hosting">
-            <li className="cursor-pointer hover:text-gray-500">Web-Hosting</li>
+          <Link to="/templates">
+            <li className="cursor-pointer hover:text-gray-500">Templates</li>
+          </Link>
+          <Link to="/about">
+            <li className="cursor-pointer hover:text-gray-500">About</li>
           </Link>
         </ul>
         {/* button hide on small device*/}
@@ -72,15 +73,6 @@ const Navbar = () => {
               Home
             </a>
             </Link>
-            <Link to="/about">
-            <a
-              href="about"
-              className="px-4 py-2 rounded-full inline-block"
-              onClick={() => setShowMobileMenu(false)}
-            >
-              About
-            </a>
-            </Link>
             <Link to="/blog">
             <a
               href="blog"
@@ -90,13 +82,22 @@ const Navbar = () => {
               Blog
             </a>
             </Link>
-            <Link to="/articles">
+            <Link to="/templates">
             <a
-              href="freebies"
+              href="templates"
               className="px-4 py-2 rounded-full inline-block"
               onClick={() => setShowMobileMenu(false)}
             >
-              Articles
+              Templates
+            </a>
+            </Link>
+            <Link to="/about">
+            <a
+              href="about"
+              className="px-4 py-2 rounded-full inline-block"
+              onClick={() => setShowMobileMenu(false)}
+            >
+              About
             </a>
             </Link>
           </ul>

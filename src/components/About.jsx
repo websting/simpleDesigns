@@ -8,17 +8,7 @@ const About = () => {
       <h1 className="text-4xl font-extrabold mb-6 leading-tight text-center">Mission & Vision</h1>
 
       <p className="mb-4 text-lg leading-relaxed text-gray-500">
-        At <span className="font-semibold">simpleDesigns</span>, the idea is that great design shouldn't slow down development.
-        Founded with tech-savies in mind, the mission is simple:
-        <span className="italic"> to help you build faster by handling the front-end design for you.</span>
-      </p>
-
-      
-
-      <p className="mb-4 text-lg leading-relaxed text-gray-500">
-        Whether you're spinning up a new project or scaling an existing one, our collection of clean, responsive templates
-        allows you to skip the styling and jump straight into the dynamic work. Built with <span className="font-medium">React</span>, <span className="font-medium">Tailwind CSS</span>, and <span className="font-medium">Vite</span>,
-        every template is optimized for performance, scalability, and developer experience.
+        At simpleDesigns, our mission is to help developers build faster with clean, modern starter templates that eliminate the design bottleneck and let you focus on real development. Our vision extends beyond great UI—we provide streamlined web-hosting services so your projects move effortlessly from concept to deployment. With reliable templates and hosting working together, we aim to create a development experience that’s faster, smoother, and truly end-to-end.
       </p>
 
       <p className="mb-4 text-lg leading-relaxed text-gray-500">

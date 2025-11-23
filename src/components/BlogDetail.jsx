@@ -29,6 +29,12 @@ const BlogDetail = () => {
         className="text-gray-500 space-y-4 leading-relaxed "
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+      <Link
+                to={`/`}
+                className="text-blue-600 font-medium mt-3 inline-block hover:underline"
+              >
+                Back to Home →
+              </Link>
     </div>
   );
 };

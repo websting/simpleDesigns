@@ -1,7 +1,7 @@
 
 import {Routes, Route} from 'react-router-dom';
 import Navbar from "./components/Navbar";
-import Home from './components/Home';
+import Home from './components/Templates';
 import Searchbar from './components/Searchbar';
 import ImageDetail from './components/ImageDetail';
 import DownloadPage from './components/DownloadPage';
@@ -12,6 +12,7 @@ import BlogDetail from './components/BlogDetail';
 import ThankYou from './components/Thank-you';
 import Footer from './components/Footer';
 import Cancel from './components/Cancel';
+import Templates from './components/Templates';
 import WebHosting from './components/WebHosting';
 
 
@@ -31,7 +32,7 @@ function App() {
       <main className='flex-1 flex flex-col'>
       {/* Dynamic Menu Links */}
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<WebHosting/>} />
         <Route path='/details/:public_id' element={<ImageDetail />} />
         <Route path='checkout' element={<OrderSummary />} />
         <Route path='/download' element={<DownloadPage />} />
@@ -40,7 +41,7 @@ function App() {
         <Route path='/blog/:slug' element={<BlogDetail />} />
         <Route path='/Thank-you' element={<ThankYou />} />
         <Route path='/cancel' element={<Cancel />} />
-        <Route path='/web-hosting' element={<WebHosting />} />
+        <Route path='/templates' element={<Templates />} />
       </Routes>
       </main>
       <Footer />

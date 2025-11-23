@@ -2,7 +2,7 @@
 import ImageList from "./ImageList";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Templates = () => {
   return (
     <div>
       {/* Header / Title */}
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Templates;
