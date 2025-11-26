@@ -8,8 +8,11 @@ const About = () => {
       <h1 className="text-4xl font-extrabold mb-6 leading-tight text-center">Mission & Vision</h1>
 
       <p className="mb-4 text-lg leading-relaxed text-gray-500">
-        At simpleDesigns, our mission is to help developers build faster with clean, modern starter templates that eliminate the design bottleneck and let you focus on real development. Our vision extends beyond great UI—we provide streamlined web-hosting services so your projects move effortlessly from concept to deployment. With reliable templates and hosting working together, we aim to create a development experience that’s faster, smoother, and truly end-to-end.
+        At simpleDesigns, our mission is to help you build faster with clean, modern websites, eliminating design bottlenecks so you can focus on growing your business. Our vision goes beyond great UI—we also offer streamlined web-hosting services, ensuring your projects move seamlessly from concept to deployment. By combining reliable templates with robust hosting, we create a development experience that is faster, smoother, and truly end-to-end.
       </p>
+
+
+
 
       <p className="mb-4 text-lg leading-relaxed text-gray-500">
         Why spend hours tweaking UI when you could be shipping features?
@@ -26,8 +29,7 @@ const About = () => {
     className="w-16 h-16 rounded-full object-center shadow"
   />
   <p className="text-lg leading-relaxed text-gray-500">
-    Hi! I'm the solo creator behind simpleDesigns — a self thought developer who knows how time-consuming front-end work can be when all you want is to focus on functionality.
-    I built this platform to make your dev process smoother by offering templates that are clean, fast, and easy to integrate.
+    Hi! I’m the solo creator behind simpleDesigns—a self-taught developer who knows how time-consuming front-end work can be when all you want is to focus on functionality. I built this platform to make your development process smoother by offering services that are clean, fast, and easy to integrate.
   </p>
 </div>
 
@@ -38,7 +40,7 @@ const About = () => {
 
       <h2 className="text-2xl mb-4">My Vision</h2>
       <p className="text-lg leading-relaxed text-gray-500">
-        My vision for simpleDesigns is to help developers build faster by embracing <span className="font-medium">speed</span>, <span className="font-medium">simplicity</span>, and <span className="font-medium">modern tools</span>. That means lightweight code, scalable components, and designs that don’t get in your way.
+        My vision for simpleDesigns is to help you build faster by embracing <span className="font-medium">speed</span>, <span className="font-medium">simplicity</span>, and <span className="font-medium">modern tools</span>. That means lightweight code, scalable components, and designs that don’t get in your way.
       </p>
       <br />
       <h2 className="text-2xl mb-4">My Mode</h2>

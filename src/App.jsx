@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import Cancel from './components/Cancel';
 import Templates from './components/Templates';
 import WebHosting from './components/WebHosting';
+import ContactForm from './components/ContactForm';
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path='/Thank-you' element={<ThankYou />} />
         <Route path='/cancel' element={<Cancel />} />
         <Route path='/templates' element={<Templates />} />
+        <Route path='/contact' element={<ContactForm />} />
       </Routes>
       </main>
       <Footer />
