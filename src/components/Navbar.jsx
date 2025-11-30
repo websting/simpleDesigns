@@ -35,6 +35,10 @@ const Navbar = () => {
           <Link to="/about">
             <li className="cursor-pointer hover:text-gray-500">About</li>
           </Link>
+          <Link to="/pricing">
+            <li className="cursor-pointer hover:text-gray-500">Pricing</li>
+          </Link>
+          
         </ul>
         {/* button hide on small device*/}
         <button className="hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer hover:text-gray-500">
@@ -98,6 +102,15 @@ const Navbar = () => {
               onClick={() => setShowMobileMenu(false)}
             >
               About
+            </a>
+            </Link>
+            <Link to="/pricing">
+            <a
+              href="pricing"
+              className="px-4 py-2 rounded-full inline-block"
+              onClick={() => setShowMobileMenu(false)}
+            >
+              Pricing
             </a>
             </Link>
           </ul>

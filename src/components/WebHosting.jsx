@@ -20,7 +20,7 @@ export default function WebHosting() {
       {/* FLOATING CARDS */}
       <section className="relative z-10 -mt-24 w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 px-4 pb-24">
         {/* Website Design Card */}
-        <div className="bg-orange-300 shadow-xl rounded-xl p-8 border border-slate-100 hover:shadow-2xl transition-shadow duration-300 group cursor-pointer transform hover:-translate-y-1">
+        <div className="bg-white shadow-xl rounded-xl p-8 border border-slate-100 hover:shadow-2xl transition-shadow duration-300 group cursor-pointer transform hover:-translate-y-1">
           <div className="w-14 h-14 mb-6 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export default function WebHosting() {
             </svg>
           </div>
           <h3 className="text-2xl font-semibold text-slate-800 mb-4">
-            Need a Home for Your Website?
+            Need Hosting to Launch Your Website Quickly?
           </h3>
           <p className="text-slate-600 mb-4 leading-relaxed">
             To establish a strong online presence, your website needs a reliable
@@ -86,7 +86,7 @@ export default function WebHosting() {
         </div>
 
         {/* Domain Setup Card */}
-        <div className="bg-gray-300 shadow-xl rounded-xl p-8 border border-slate-100 hover:shadow-2xl transition-shadow duration-300 group cursor-pointer transform hover:-translate-y-1">
+        <div className="bg-white shadow-xl rounded-xl p-8 border border-slate-100 hover:shadow-2xl transition-shadow duration-300 group cursor-pointer transform hover:-translate-y-1">
           <div className="w-14 h-14 mb-6 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center group-hover:bg-purple-200 transition-colors duration-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -114,9 +114,9 @@ export default function WebHosting() {
           </p>
           <Link
             to={`/blog/what-is-a-domain-name`}
-            className="text-purple-600 font-semibold mt-3 inline-block hover:text-purple-800 transition-colors duration-200"
+            className="text-blue-600 font-semibold mt-3 inline-block hover:text-blue-800 transition-colors duration-200"
           >
-            More Here →
+            Read More →
           </Link>
         </div>
 
@@ -190,7 +190,7 @@ export default function WebHosting() {
             to={`/contact`}
             className=" font-semibold
             bg-gradient-to-r from-yellow-500 to-blue-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-500">
-            <h3 className="text-xl font-semibold mb-1">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Contact Us</h3>
             </Link>
             <p className="text-gray-600 max-w-xs leading-relaxed">
               Share your business needs and goals so we can craft the ideal solution for you. 
@@ -217,10 +217,10 @@ export default function WebHosting() {
               </svg>
             </div>
             <Link
-            to={`#`}
+            to={`/pricing`}
             className=" font-semibold
             bg-gradient-to-r from-yellow-500 to-blue-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-500">
-            <h3 className="text-xl font-semibold mb-1">Detailed Quote</h3>
+            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Detailed Quote</h3>
             </Link>
             <p className="text-gray-600 max-w-xs leading-relaxed">
               We’ll send you a detailed quote outlining costs and services, followed by a call or meeting.
@@ -255,7 +255,7 @@ export default function WebHosting() {
             to={`#`}
             className=" font-semibold
             bg-gradient-to-r from-yellow-500 to-blue-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-500">
-            <h3 className="text-xl font-semibold mb-1">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Backend</h3>
             </Link>
             <p className="text-gray-600 max-w-xs leading-relaxed">
               Once you approve, we register your domain and set up your hosting.
@@ -278,9 +278,9 @@ export default function WebHosting() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 21h8m-4-4v4" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Website Deployment</h3>
+            <h3 className="text-xl font-semibold mb-3">Frontend</h3>
             <p className="text-gray-600 max-w-xs leading-relaxed">
-              Once the backend is complete, your website takes shape and goes live on schedule.
+              As soon as the backend step is complete, your website takes shape and goes live on schedule.
             </p>
           </div>
         </div>

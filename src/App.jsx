@@ -15,6 +15,7 @@ import Cancel from './components/Cancel';
 import Templates from './components/Templates';
 import WebHosting from './components/WebHosting';
 import ContactForm from './components/ContactForm';
+import PricingPage from './components/Pricing';
 
 
 
@@ -44,6 +45,7 @@ function App() {
         <Route path='/cancel' element={<Cancel />} />
         <Route path='/templates' element={<Templates />} />
         <Route path='/contact' element={<ContactForm />} />
+        <Route path='/pricing' element={<PricingPage />} />
       </Routes>
       </main>
       <Footer />
