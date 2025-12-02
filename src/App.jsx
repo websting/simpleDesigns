@@ -34,7 +34,7 @@ function App() {
       <main className='flex-1 flex flex-col'>
       {/* Dynamic Menu Links */}
       <Routes>
-        <Route path='/' element={<WebHosting/>} />
+        <Route path='/' element={<Templates/>} />
         <Route path='/details/:public_id' element={<ImageDetail />} />
         <Route path='checkout' element={<OrderSummary />} />
         <Route path='/download' element={<DownloadPage />} />
@@ -43,7 +43,7 @@ function App() {
         <Route path='/blog/:slug' element={<BlogDetail />} />
         <Route path='/Thank-you' element={<ThankYou />} />
         <Route path='/cancel' element={<Cancel />} />
-        <Route path='/templates' element={<Templates />} />
+        <Route path='/webhosting' element={<WebHosting />} />
         <Route path='/contact' element={<ContactForm />} />
         <Route path='/pricing' element={<PricingPage />} />
       </Routes>

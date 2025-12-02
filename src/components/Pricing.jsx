@@ -1,16 +1,6 @@
 export default function PricingPage() {
   const plans = [
     {
-      title: "Website Design (WordPress)",
-      price: "$699+",
-      features: [
-        "Custom WordPress Build",
-        "Responsive Mobile Design",
-        "SEO-Ready Setup",
-        "Basic Plugins Included"
-      ]
-    },
-    {
       title: "Web Hosting",
       price: "$19/mo",
       features: [
@@ -21,13 +11,13 @@ export default function PricingPage() {
       ]
     },
     {
-      title: "Domain Registration",
-      price: "$12/yr",
+      title: "Website Design (WordPress)",
+      price: "$699+",
       features: [
-        "Your Domain Name",
-        "DNS Setup Included",
-        "Domain Privacy Option",
-        "Fast Registration"
+        "Custom WordPress Build",
+        "Responsive Mobile Design",
+        "SEO-Ready Setup",
+        "Basic Plugins Included"
       ]
     }
   ];
@@ -56,10 +46,10 @@ export default function PricingPage() {
         service or bundle everything with our most popular package.
       </p>
 
-      
-
       {/* 3 SERVICE CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        {/* Existing two plans */}
         {plans.map((plan) => (
           <div
             key={plan.title}
@@ -85,42 +75,43 @@ export default function PricingPage() {
               href="/contact"
               className="block w-full text-center bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition"
             >
-              Select
+              Select Plan
             </a>
           </div>
         ))}
-      </div>
 
-      {/* MOST POPULAR CARD */}
-      <div className="mb-20 mt-16">
-        <div className="relative max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-10 border border-blue-500 hover:scale-[1.02] transition">
-          <span className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full shadow">
-            {popularPlan.subtitle}
-          </span>
+        {/* Popular plan moved into grid (centered like the others) */}
+<div className="relative bg-white border rounded-2xl p-8 shadow-md hover:shadow-xl transition hover:scale-[1.02]">
+  <span className="absolute top-4 right-4 bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full shadow">
+    {popularPlan.subtitle}
+  </span>
 
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            {popularPlan.title}
-          </h2>
-          <p className="text-3xl font-extrabold text-blue-600 mb-6">
-            {popularPlan.price}
-          </p>
+  <h2 className="text-xl font-bold text-gray-800 mb-2">
+    {popularPlan.title}
+  </h2>
 
-          <ul className="space-y-3 mb-8">
-            {popularPlan.features.map((item) => (
-              <li key={item} className="text-gray-700 flex items-start gap-2">
-                <span className="text-blue-600">✔</span> {item}
-              </li>
-            ))}
-          </ul>
+  <p className="text-3xl font-extrabold text-blue-600 mb-6">
+    {popularPlan.price}
+  </p>
 
-          <a
-            href="/contact"
-            className="block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Get Started
-          </a>
-        </div>
+  <ul className="space-y-3 mb-8">
+    {popularPlan.features.map((item) => (
+      <li key={item} className="text-gray-700 flex items-start gap-2">
+        <span className="text-blue-600">✔</span> {item}
+      </li>
+    ))}
+  </ul>
+
+  <a
+    href="/contact"
+    className="block w-full text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+  >
+    Get Started
+  </a>
+  
+</div>
       </div>
     </div>
   );
 }
+

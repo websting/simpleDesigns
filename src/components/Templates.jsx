@@ -10,8 +10,8 @@ const Templates = () => {
         <h1 className="text-4xl font-extrabold mb-6 leading-tight">
           Website Templates for Developers, Designers & Freelancers
         </h1>
-        <p className="text-gray-500 text-md max-w-xl mx-auto">
-          Save time with responsive, SEO-friendly HTML5 templates that look great on any device.
+        <p className="text-gray-500 text-md max-w-xl mx-auto mb-12">
+          Responsive SEO-friendly HTML5 templates that look great on any device.
         </p>
       </div>
       <div>

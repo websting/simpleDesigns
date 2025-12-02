@@ -138,11 +138,11 @@ export default function WebHosting() {
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-semibold text-slate-800 mb-4">Complete Package</h3>
+          <h3 className="text-2xl font-semibold text-slate-800 mb-4">Complete Maged Web Hosting Package</h3>
           <p className="text-white/90 mb-6 leading-relaxed">
-            Take advantage of our all-in-one website solution, which includes custom design, domain registration, and fast, secure hosting—all managed for your convenience. Enjoy a stress-free setup and reliable performance, so you can focus on growing your business.
+            Upgrade to our all-in-one website solution, featuring domain registration, fast and secure hosting, and a fully managed WordPress website—all handled for your convenience. Experience a stress-free setup and dependable performance, allowing you to focus on growing your business.
           </p>
-          <div className="absolute right-6 top- bg-white text-blue-700 text-xs font-semibold px-3 py-2 rounded-full shadow-lg hover:bg-blue-50 transition cursor-pointer">
+          <div className="absolute right-6 top-9 bg-white text-blue-700 text-xs font-semibold px-3 py-2 rounded-full shadow-lg hover:bg-blue-50 transition cursor-pointer">
             <a href="#how-is-done">How it Works</a>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function WebHosting() {
       >
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-3">
-            How It’s Done
+            Initial Setup Process
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Our simple transparent process gets your website live smoothly and
@@ -190,15 +190,15 @@ export default function WebHosting() {
             to={`/contact`}
             className=" font-semibold
             bg-gradient-to-r from-yellow-500 to-blue-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-500">
-            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Contact</h3>
             </Link>
             <p className="text-gray-600 max-w-xs leading-relaxed">
-              Share your business needs and goals so we can craft the ideal solution for you. 
+              Reach out via our contact form to discuss your web hosting needs.
             </p>
           </div>
 
           {/* Step 2 */}
-          <div className="flex flex-col items-center text-center border-transparent hover:border-2 hover:border-purple-500 rounded-lg p-4 transition hover:cursor-pointer">
+          <div className="flex flex-col items-center text-center border-transparent hover:border-2 hover:border-purple-500 rounded-lg p-4 transition">
             <div className="bg-yellow-600 hover:bg-yellow-400 text-white rounded-full p-5 mb-4 inline-flex shadow-lg">
               {/* Icon: Quote/Document */}
               <svg
@@ -216,19 +216,15 @@ export default function WebHosting() {
                 />
               </svg>
             </div>
-            <Link
-            to={`/pricing`}
-            className=" font-semibold
-            bg-gradient-to-r from-yellow-500 to-blue-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-500">
-            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Detailed Quote</h3>
-            </Link>
+            <h3 className="text-xl font-semibold mb-3">Proposal</h3>
             <p className="text-gray-600 max-w-xs leading-relaxed">
-              We’ll send you a detailed quote outlining costs and services, followed by a call or meeting.
+              Next we provide a quote outlining the hosting plan and
+              costs.
             </p>
           </div>
 
           {/* Step 3 */}
-          <div className="flex flex-col items-center text-center border-transparent hover:border-2 hover:border-blue-500 rounded-lg p-4 transition hover:cursor-pointer">
+          <div className="flex flex-col items-center text-center border-transparent hover:border-2 hover:border-blue-500 rounded-lg p-4 transition">
             <div className="bg-green-600 hover:bg-green-400 text-white rounded-full p-5 mb-4 inline-flex shadow-lg">
               {/* Icon: Server/Cloud */}
               <svg
@@ -251,19 +247,14 @@ export default function WebHosting() {
                 />
               </svg>
             </div>
-            <Link
-            to={`#`}
-            className=" font-semibold
-            bg-gradient-to-r from-yellow-500 to-blue-500 bg-[length:0%_2px] bg-left-bottom bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-500">
-            <h3 className="text-xl font-semibold mb-1 hover:text-purple-500">Backend</h3>
-            </Link>
+            <h3 className="text-xl font-semibold mb-3">Backend</h3>
             <p className="text-gray-600 max-w-xs leading-relaxed">
-              Once you approve, we register your domain and set up your hosting.
+              Once approved, we set up your domain and hosting environment.
             </p>
           </div>
 
           {/* Step 4 */}
-          <div className="flex flex-col items-center text-center border-transparent hover:border-2 hover:border-yellow-500 rounded-lg p-4 transition hover:cursor-pointer">
+          <div className="flex flex-col items-center text-center border-transparent hover:border-2 hover:border-yellow-500 rounded-lg p-4 transition">
             <div className="bg-purple-600 hover:bg-purple-400 text-white rounded-full p-5 mb-4 inline-flex shadow-lg">
               {/* Icon: Monitor/Screen */}
               <svg
@@ -280,7 +271,7 @@ export default function WebHosting() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Frontend</h3>
             <p className="text-gray-600 max-w-xs leading-relaxed">
-              As soon as the backend step is complete, your website takes shape and goes live on schedule.
+              Finally, we launch your website and ensure everything runs smoothly.
             </p>
           </div>
         </div>
@@ -291,7 +282,7 @@ export default function WebHosting() {
             our hosting with zero downtime—all remotely and hassle-free.
           </p>
           <a
-            href="/hosting"
+            href="/contact"
             className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition"
           >
             Get Hosting Now

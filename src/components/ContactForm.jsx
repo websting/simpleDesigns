@@ -276,7 +276,7 @@ export default function ContactForm() {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Anything else you'd like to tell us? If not, we'll reach out soon!"
+          placeholder="Anything else you'd like to tell us?  We'll reach out soon.  Thanks in advance!"
           className="border border-gray-300 rounded-md p-3 w-full h-28 resize-none focus:ring-2 focus:ring-blue-500"
         />
 

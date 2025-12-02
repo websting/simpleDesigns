@@ -25,25 +25,29 @@ const Navbar = () => {
           <Link to="/">
             <li className="cursor-pointer hover:text-gray-500">Home</li>
           </Link>
+
+          <Link to="/webhosting">
+            <li className="cursor-pointer hover:text-gray-500">Web-Hosting</li>
+          </Link>
           
           <Link to="/blog">
             <li className="cursor-pointer hover:text-gray-500">Blog</li>
           </Link>
-          <Link to="/templates">
-            <li className="cursor-pointer hover:text-gray-500">Templates</li>
-          </Link>
+          
           <Link to="/about">
             <li className="cursor-pointer hover:text-gray-500">About</li>
           </Link>
+          
           <Link to="/pricing">
             <li className="cursor-pointer hover:text-gray-500">Pricing</li>
           </Link>
-          
         </ul>
+        
         {/* button hide on small device*/}
         <button className="hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer hover:text-gray-500">
           Login
         </button>
+
         {/* mobile menu icon / hidden by default */}
         <RxHamburgerMenu
           className="md:hidden w-7 text-2xl"
@@ -55,8 +59,8 @@ const Navbar = () => {
         {/* if on small screens is tru show menu otherwise hide menu */}
         <div
           className={`md:hidden ${
-            showMobileMenu ? "fixed w-70" : "h-0 w-0"
-          } right-0 top-0 bottom-0 overflow-hidden bg-white transition-all`}
+            showMobileMenu ? "fixed w-50" : "h-0 w-0"
+          } right-0 top-0 bottom-0 overflow-hidden bg-white/90 transition-all`}
         >
           {/* mobile close button */}
           <div
@@ -67,11 +71,11 @@ const Navbar = () => {
             <AiOutlineClose />
           </div>
           {/* mobile links / when clicked menu closes */}
-          <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
+          <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg text-blue-800 font-medium">
             <Link to="/">
             <a
               href="home"
-              className="px-4 py-2 rounded-full inline-block"
+              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
               onClick={() => setShowMobileMenu(false)}
             >
               Home
@@ -80,25 +84,25 @@ const Navbar = () => {
             <Link to="/blog">
             <a
               href="blog"
-              className="px-4 py-2 rounded-full inline-block"
+              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
               onClick={() => setShowMobileMenu(false)}
             >
               Blog
             </a>
             </Link>
-            <Link to="/templates">
+            <Link to="/webhosting">
             <a
               href="templates"
-              className="px-4 py-2 rounded-full inline-block"
+              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
               onClick={() => setShowMobileMenu(false)}
             >
-              Templates
+              Web-Hosting
             </a>
             </Link>
             <Link to="/about">
             <a
               href="about"
-              className="px-4 py-2 rounded-full inline-block"
+              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
               onClick={() => setShowMobileMenu(false)}
             >
               About
@@ -107,7 +111,7 @@ const Navbar = () => {
             <Link to="/pricing">
             <a
               href="pricing"
-              className="px-4 py-2 rounded-full inline-block"
+              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
               onClick={() => setShowMobileMenu(false)}
             >
               Pricing
