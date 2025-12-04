@@ -1,22 +1,33 @@
-import React from 'react';
-import BlogCard from '../components/BlogCard';
-import blogPosts from '../data/BlogPosts';
+import React from "react";
+import BlogCard from "../components/BlogCard";
+import blogPosts from "../data/BlogPosts";
 
 const Blog = () => {
   return (
-    <div className="bg-gray-50 min-h-[calc(100vh-520px)] pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl font-extrabold mb-6 mb-2 text-center">Latest articles</h1>
-        <p className="text-gray-500 mb-12">Read insights, tutorials, and design tips from our team.</p>
-      </div>
+    <div className="w-full flex flex-col items-center bg-gray-50">
 
-      <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
-      </div>
+      {/* HERO SECTION */}
+      <section className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-28 px-6 text-center shadow-lg">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          Latest Articles & Insights
+        </h1>
+        <p className="text-white/90 max-w-2xl mx-auto text-lg md:text-xl">
+          Read tutorials, guides, and tips to help you build and grow your online presence.
+        </p>
+      </section>
+
+      {/* BLOG GRID */}
+      <section className="relative w-full max-w-6xl -mt-20 z-20 px-4 pb-24">
+        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {blogPosts.map((post) => (
+            <BlogCard key={post.id} post={post} />
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 };
 
 export default Blog;
+

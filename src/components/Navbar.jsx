@@ -38,8 +38,8 @@ const Navbar = () => {
             <li className="cursor-pointer hover:text-gray-500">About</li>
           </Link>
           
-          <Link to="/pricing">
-            <li className="cursor-pointer hover:text-gray-500">Pricing</li>
+          <Link to="/services">
+            <li className="cursor-pointer hover:text-gray-500">Services</li>
           </Link>
         </ul>
         
@@ -108,13 +108,13 @@ const Navbar = () => {
               About
             </a>
             </Link>
-            <Link to="/pricing">
+            <Link to="/services">
             <a
-              href="pricing"
+              href="services"
               className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
               onClick={() => setShowMobileMenu(false)}
             >
-              Pricing
+              Services
             </a>
             </Link>
           </ul>
