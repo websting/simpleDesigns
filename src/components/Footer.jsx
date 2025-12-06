@@ -23,9 +23,6 @@ const Footer = () => {
           <Link to="/blog">
             <li className="cursor-pointer hover:text-gray-500">Blog</li>
           </Link>
-          <Link to="/webhosting">
-            <li className="cursor-pointer hover:text-gray-500">Web-Hosting</li>
-          </Link>
         </div>
 
         {/* Right Section - Social Icons */}

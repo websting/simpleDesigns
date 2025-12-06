@@ -12,11 +12,6 @@ import BlogDetail from './components/BlogDetail';
 import ThankYou from './components/Thank-you';
 import Footer from './components/Footer';
 import Cancel from './components/Cancel';
-// import Templates from './components/Templates';
-import WebHosting from './components/WebHosting';
-import ContactForm from './components/ContactForm';
-import PricingPage from './components/Pricing';
-
 
 
 
@@ -43,10 +38,6 @@ function App() {
         <Route path='/blog/:slug' element={<BlogDetail />} />
         <Route path='/Thank-you' element={<ThankYou />} />
         <Route path='/cancel' element={<Cancel />} />
-        <Route path='/webhosting' element={<WebHosting />} />
-        <Route path='/contact' element={<ContactForm />} />
-        <Route path='/services' element={<PricingPage />} />
-        {/* <Route path='/templates' element={<Templates />} /> */}
       </Routes>
       </main>
       <Footer />

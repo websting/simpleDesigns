@@ -26,10 +26,6 @@ const Navbar = () => {
             <li className="cursor-pointer hover:text-gray-500">Home</li>
           </Link>
 
-          <Link to="/webhosting">
-            <li className="cursor-pointer hover:text-gray-500">Web-Hosting</li>
-          </Link>
-          
           <Link to="/blog">
             <li className="cursor-pointer hover:text-gray-500">Blog</li>
           </Link>
@@ -38,9 +34,6 @@ const Navbar = () => {
             <li className="cursor-pointer hover:text-gray-500">About</li>
           </Link>
           
-          <Link to="/services">
-            <li className="cursor-pointer hover:text-gray-500">Services</li>
-          </Link>
         </ul>
         
         {/* button hide on small device*/}
@@ -90,15 +83,6 @@ const Navbar = () => {
               Blog
             </a>
             </Link>
-            <Link to="/webhosting">
-            <a
-              href="templates"
-              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
-              onClick={() => setShowMobileMenu(false)}
-            >
-              Web-Hosting
-            </a>
-            </Link>
             <Link to="/about">
             <a
               href="about"
@@ -106,15 +90,6 @@ const Navbar = () => {
               onClick={() => setShowMobileMenu(false)}
             >
               About
-            </a>
-            </Link>
-            <Link to="/services">
-            <a
-              href="services"
-              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
-              onClick={() => setShowMobileMenu(false)}
-            >
-              Services
             </a>
             </Link>
           </ul>

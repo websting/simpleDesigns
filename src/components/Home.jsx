@@ -12,22 +12,16 @@ export default function Home() {
             Website Templates for Developers Designers & Freelancers
           </h1>
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 drop-shadow-md">
-            Modern, responsive HTML5 templates that save you time — fully customizable, SEO-friendly, and ready to deploy. Plus, fast and reliable web hosting to launch your projects instantly.
+            Modern, responsive HTML5 templates that save you time — fully customizable, SEO-friendly, and ready to deploy. 
           </p>
 
           <div className="flex justify-center gap-4 mt-6 flex-wrap">
             <a
               href="#templates"
-              className="bg-white text-blue-700 font-semibold px-8 py-4 rounded-lg shadow hover:bg-blue-50 transition"
+              className="border border-white text-white px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-gray-900 transition font-semibold"
             >
               Browse Templates
             </a>
-            <Link
-              to="/webhosting"
-              className="border border-white text-white px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-gray-900 transition font-semibold"
-            >
-              Explore Hosting
-            </Link>
           </div>
         </div>
       </section>
