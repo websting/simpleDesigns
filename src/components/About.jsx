@@ -10,14 +10,14 @@ const About = () => {
           Mission & Vision
         </h1>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-          At simpleDesigns, My mission is to help you build faster with clean, modern websites, eliminating design bottlenecks so you can focus on growing your business.
+          My mission at simpleDesigns is to help you build faster with clean, modern templates that eliminate design bottlenecks, allowing you to focus on what matters most — functionality and user experience.
         </p>
       </section>
 
       {/* WHY SECTION */}
       <section className="max-w-4xl text-center">
         <p className="text-lg text-gray-600 italic">
-          Why spend hours tweaking UI when you could be shipping features?
+          Why spend hours tweaking UI when you could be shipping features? simpleDesigns templates are built to be lightweight, easy to customize, and visually appealing—so you can get projects done faster without sacrificing quality.
         </p>
       </section>
 
@@ -42,7 +42,7 @@ const About = () => {
       <section className="max-w-4xl mb-16">
         <h2 className="text-3xl font-bold mb-4 text-gray-900">New Templates, Regularly</h2>
         <p className="text-gray-700 text-lg leading-relaxed">
-          I’m constantly adding new templates — usually every few weeks — based on what developers are asking for. Got an idea? I’m always open to suggestions.
+          I’m constantly adding new templates based on user feedback and the latest design trends. Stay tuned for regular updates that keep your projects fresh and modern. 
         </p>
       </section>
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BlogCard = ({ post }) => {
   return (
-    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:translate-y-1">
+    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 hover:translate-y-1 ">
       <img
         src={post.image}
         alt={post.title}

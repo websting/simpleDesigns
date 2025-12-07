@@ -14,7 +14,7 @@ const ImageList = () => {
   
   return (
     // twiak footer as needed 520 or less
-    <div className="min-h-[calc(100vh-520px)] bg-white">
+    <div className="min-h-[calc(100vh-520px)] bg-gray-50">
       {/* Template Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -8,7 +8,7 @@ const BlogDetail = () => {
 
   if (!post) {
     return (
-      <div className="text-center pt-20">
+      <div className="text-center pt-20 ">
         <h1 className="text-2xl font-bold text-gray-800">Post not found</h1>
         <Link to="/blog" className="text-blue-600 underline mt-4 inline-block">
           ← Back to Blogs
@@ -33,7 +33,7 @@ const BlogDetail = () => {
       <h1 className="text-2xl font-extrabold text-center mb-4">{post.title}</h1>
       <p className="text-gray-500 mb-6">{post.date}</p>
       <div
-        className="text-gray-500 space-y-4 leading-relaxed "
+        className="text-gray-600 leading-relaxed space-y-4"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
       <Link
