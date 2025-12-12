@@ -26,7 +26,7 @@ function App() {
       <Navbar />
       <Searchbar />
       {/*Main content area */}
-      <main className='flex-1 flex flex-col'>
+      <main className='flex flex-col flex-1'>
       {/* Dynamic Menu Links */}
       <Routes>
         <Route path='/' element={<Home/>} />

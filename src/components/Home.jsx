@@ -30,7 +30,7 @@ export default function Home() {
       {/* TEMPLATES / IMAGE LIST */}
       {/* ========================= */}
       <section id="templates" className="py-16 px-6 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-5">Designed for Freelancers & Agencies</h2>
+        <h2 className="text-3xl font-bold text-center mb-5">Flexible Templates for Rapid Delivery</h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
           Deliver high-quality client projects faster with clean HTML5 templates that are easy to customize, visually modern,
             and built with flexibility in mind. Reduce development time and boost client satisfaction with professional layouts

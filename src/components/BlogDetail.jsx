@@ -43,12 +43,12 @@ const BlogDetail = () => {
         ← Back to Articles
       </Link>
       <span className="text-gray-500 mr-4">|</span>
-      <Link
+      {/* <Link
         to={`/webhosting`}
         className="text-blue-600 text-sm mt-3 inline-block hover:underline"
       >
         Back to Hosting →
-      </Link>
+      </Link> */}
     </div>
   );
 };

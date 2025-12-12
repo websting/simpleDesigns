@@ -7,8 +7,8 @@ const Blog = () => {
     <div className="w-full flex flex-col items-center bg-gray-50">
 
       {/* HERO SECTION */}
-      <section className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-28 px-6 text-center shadow-lg">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+      <section className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 py-42 text-center shadow-lg">
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
           Latest Articles & Insights
         </h1>
         <p className="text-white/90 max-w-2xl mx-auto text-lg md:text-xl">
