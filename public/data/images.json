@@ -148,5 +148,61 @@
       }
     ],
     "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
+  },
+  
+    {
+    "public_id": "nommzd610e4vcxv1tmok",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1766007369/nommzd610e4vcxv1tmok.png",
+    "title": "Photographer Template",
+    "description": "A one-page HTML template designed for photographers and creative professionals to showcase their work.",
+    "author": "simpleDesigns",
+    "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
+    "liveDemo": "https://ahtml-photographer.netlify.app/",
+    "price": "19.99",
+    "priceId": "price_1Sd8iiBqWU8yVEMvljaOgi03",
+    "fileName": "piano-coach-download.zip",
+    "features": [
+      {
+        "title": "Mobile First Design",
+        "detail": "Optimized for mobile and tablet devices"
+      },
+      {
+        "title": "Interactive",
+        "detail": "Featuring carousel and lightbox effects"
+      },
+      {
+        "title": "Fully Customizable",
+        "detail": "Easy to integrate your own images and branding"
+      },
+      {
+        "title": "SEO Optimized",
+        "detail": "Meta tags and semantic markup included."
+      },
+      {
+        "title": "Hero Section",
+        "detail": "Full image background with overlay text to grab attention"
+      },
+      {
+        "title": "Navigation",
+        "detail": "Mobile hamburger menu & animated side navigation"
+      },
+      {
+        "title": "Interactivity",
+        "detail": "HOME, CTA, and SUBMIT buttons for instant direction."
+      },
+      {
+        "title": "UI Components",
+        "detail": "Image Gallery with hover effects that highlight each photo"
+      },
+      {
+        "title": "Social Media",
+        "detail": "Social Media icons on a sidebar with hover effects"
+      },
+      {
+        "title": "Contact Form",
+        "detail": "Designed effectively to collect user inquiries"
+      }
+    ],
+    "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
   }
 ]
