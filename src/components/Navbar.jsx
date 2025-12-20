@@ -9,37 +9,45 @@ const Navbar = () => {
 
   return (
     // main wrapper
-    <div className="absolute top-0 left-0 w-full z-10 bg-stone-300">
+    <div className="absolute top-0 left-0 w-full z-10
+                bg-stone-300 dark:bg-gray-900
+                text-gray-900 dark:text-gray-100">
       {/* logo */}
       <div
         className="container mx-auto flex justify-between items-center py-4 px-6
         md:px-20 lg:px-32 cursor-pointer"
       >
-        <Link to="/">
-        <a href="#" className="text-2xl">
+        <Link to="/" className="font-bold text-2xl">
           simpleDesigns
-        </a>
         </Link>
         {/* Desktop links */}
         <ul className="hidden md:flex gap-7">
           <Link to="/">
-            <li className="cursor-pointer hover:text-gray-500">Home</li>
+            <li className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">Home</li>
           </Link>
 
           <Link to="/blog">
-            <li className="cursor-pointer hover:text-gray-500">Blog</li>
+            <li className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">Blog</li>
           </Link>
           
           <Link to="/about">
-            <li className="cursor-pointer hover:text-gray-500">About</li>
+            <li className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">About</li>
           </Link>
           
         </ul>
         
         {/* button hide on small device*/}
-        <button className="hidden md:block bg-white px-8 py-2 rounded-full cursor-pointer hover:text-gray-500">
-          Login
-        </button>
+        <div className="hidden md:flex items-center gap-3">
+
+
+  <button className="bg-white dark:bg-gray-800 px-8 py-2 rounded-full cursor-pointer
+                     hover:text-gray-500 dark:text-gray-200
+                     dark:hover:bg-gray-700 transition">
+    Login
+  </button>
+</div>
+
+
 
         {/* mobile menu icon / hidden by default */}
         <RxHamburgerMenu

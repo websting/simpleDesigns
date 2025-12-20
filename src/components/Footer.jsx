@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Section - Links */}
-        <div className="list-none flex space-x-6">
+        <div className="list-none flex space-x-8 text-white">
           <Link to="/">
             <li className="cursor-pointer hover:text-gray-500">Home</li>
           </Link>
@@ -26,14 +26,14 @@ const Footer = () => {
         </div>
 
         {/* Right Section - Social Icons */}
-        <div className="flex space-x-5">
+        <div className="flex space-x-8">
           <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-white transition">
             <Facebook className="w-5 h-5" />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-white transition">
             <Twitter className="w-5 h-5" />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-whit
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-white
           
           
           e transition">

@@ -9,9 +9,10 @@ import { Elements } from '@stripe/react-stripe-js'
 const stripePromise = loadStripe('');
 
 createRoot(document.getElementById('root')).render(
-  
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  
+    
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+
+
 )

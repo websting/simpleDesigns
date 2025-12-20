@@ -1,65 +1,111 @@
-import profilePic from '../assets/profilePic.jpg'; // adjust path if needed
+import profilePic from "../assets/profilePic.jpg";
 
 const About = () => {
   return (
-    <div className="w-full flex flex-col items-center bg-gradient-to-b from-indigo-50 via-gray-50 to-gray-50 py-16 px-6">
+    <div className="w-full bg-gray-50">
 
-      {/* HERO SECTION */}
-      <section className="max-w-4xl text-center mb-5">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900">
-          Mission & Vision
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-          My mission at simpleDesigns is to help you build faster with clean, modern templates that eliminate design bottlenecks, allowing you to focus on what matters most — functionality and user experience.
-        </p>
-      </section>
+      {/* ========================= */}
+      {/* HEADER */}
+      {/* ========================= */}
+      <section className="bg-white pt-28 pb-32 px-6 text-center relative overflow-hidden">
+        {/* subtle background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none" />
 
-      {/* WHY SECTION */}
-      <section className="max-w-4xl text-center">
-        <p className="text-lg text-gray-600 italic">
-          Why spend hours tweaking UI when you could be shipping features? simpleDesigns templates are built to be lightweight, easy to customize, and visually appealing—so you can get projects done faster without sacrificing quality.
-        </p>
-      </section>
+        <div className="relative max-w-4xl mx-auto">
+          <span className="inline-block mb-4 text-sm font-semibold tracking-wide text-indigo-600 uppercase">
+            About simpleDesigns
+          </span>
 
-      <div className="w-full max-w-4xl border border-gray-200 my-12"></div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900">
+            Mission & Vision
+          </h1>
 
-      {/* CREATOR SECTION */}
-      <section className="max-w-4xl mb-16">
-        <h2 className="text-3xl font-bold mb-6 text-gray-900">Meet the Creator</h2>
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          <img
-            src={profilePic}
-            alt="Creator"
-            className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-gray-300"
-          />
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Hi! I’m the solo creator behind simpleDesigns—a self-taught developer who knows how time-consuming front-end work can be when all you want is to focus on functionality. I built this platform to make your development process smoother by offering services that are clean, fast, and easy to integrate.
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+            My mission at simpleDesigns is to help you build faster with clean,
+            modern templates that eliminate design bottlenecks—so you can focus
+            on functionality and user experience.
           </p>
         </div>
       </section>
 
-      {/* UPDATES SECTION */}
-      <section className="max-w-4xl mb-16">
-        <h2 className="text-3xl font-bold mb-4 text-gray-900">New Templates, Regularly</h2>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          I’m constantly adding new templates based on user feedback and the latest design trends. Stay tuned for regular updates that keep your projects fresh and modern. 
-        </p>
-      </section>
+      {/* ========================= */}
+      {/* CONTENT */}
+      {/* ========================= */}
+      <section className="relative max-w-4xl mx-auto -mt-20 bg-white rounded-xl shadow-sm px-8 py-12 mb-24">
 
-      {/* VISION SECTION */}
-      <section className="max-w-4xl mb-16">
-        <h2 className="text-3xl font-bold mb-4 text-gray-900">My Vision</h2>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          My vision for simpleDesigns is to help you build faster by embracing <span className="font-semibold text-purple-500">speed</span>, <span className="font-semibold text-pink-500">simplicity</span>, and <span className="font-semibold text-orange-500">modern tools</span>. That means lightweight code, scalable components, and designs that don’t get in your way.
-        </p>
-      </section>
+        {/* WHY */}
+        <div className="text-center mb-12">
+          <p className="text-lg text-gray-600 italic leading-relaxed">
+            Why spend hours tweaking UI when you could be shipping features?
+            simpleDesigns templates are lightweight, easy to customize, and
+            visually polished—so you deliver faster without sacrificing quality.
+          </p>
+        </div>
 
-      {/* MODE SECTION */}
-      <section className="max-w-4xl mb-16 text-center">
-        <h2 className="text-3xl font-bold mb-4 text-gray-900">My Mode</h2>
-        <p className="text-gray-700 text-lg leading-relaxed">
-          The web is already out there—let’s make it better.
-        </p>
+        <div className="border-t border-gray-200 my-12" />
+
+        {/* CREATOR */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
+            Meet the Creator
+          </h2>
+
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <img
+              src={profilePic}
+              alt="Creator of simpleDesigns"
+              className="w-28 h-28 md:w-32 md:h-32 rounded-full shadow-md border border-gray-200"
+            />
+
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Hi! I’m the solo creator behind simpleDesigns—a self-taught
+              developer who understands how time-consuming front-end work can
+              be. I built this platform to remove friction from your workflow
+              by offering templates that are clean, fast, and easy to integrate.
+            </p>
+          </div>
+        </div>
+
+        {/* UPDATES */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+            New Templates, Regularly
+          </h2>
+
+          <p className="text-gray-700 text-lg leading-relaxed">
+            I’m constantly releasing new templates based on user feedback and
+            modern design trends—so your projects stay fresh, relevant, and
+            production-ready.
+          </p>
+        </div>
+
+        {/* VISION */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+            My Vision
+          </h2>
+
+          <p className="text-gray-700 text-lg leading-relaxed">
+            My vision for simpleDesigns is built on{" "}
+            <span className="font-semibold text-indigo-600">speed</span>,{" "}
+            <span className="font-semibold text-pink-500">simplicity</span>, and{" "}
+            <span className="font-semibold text-orange-500">modern tools</span>.
+            That means lightweight code, scalable components, and designs that
+            stay out of your way.
+          </p>
+        </div>
+
+        {/* MODE */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">
+            My Mode
+          </h2>
+
+          <p className="text-gray-700 text-lg leading-relaxed">
+            The web is already out there—let’s make it better.
+          </p>
+        </div>
+
       </section>
 
     </div>
@@ -67,6 +113,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 
