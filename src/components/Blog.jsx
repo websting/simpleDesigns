@@ -18,7 +18,7 @@ const Blog = () => {
             simpleDesigns Blog
           </span>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
             Latest Articles & Insights
           </h1>
 

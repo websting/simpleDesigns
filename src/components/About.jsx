@@ -16,7 +16,7 @@ const About = () => {
             About simpleDesigns
           </span>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6 text-gray-900">
             Mission & Vision
           </h1>
 
