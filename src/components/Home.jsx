@@ -15,6 +15,8 @@ export default function Home() {
         flex flex-nowrap gap-3 overflow-x-auto
         md:grid md:grid-cols-6 md:overflow-visible text-center
       "
+    
+    
     >
       <div className="min-w-max text-sm sm:text-base">
         <CategoryNavItem title="Business" link="/business" />
@@ -55,7 +57,7 @@ export default function Home() {
       RESPONSIVE HTML5 Web Designs
     </span>
 
-    <h1 className="text-4xl md:text-4xl font-extrabold text-gray-900 mb-1 leading-tight">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-1 leading-tight">
       Premium Website Templates <br className="hidden md:block" />
     </h1>
 
@@ -73,7 +75,7 @@ export default function Home() {
       {/* ========================= */}
       {/* NEW SECTION: WHY CHOOSE US */}
       {/* ========================= */}
-      <section className="py-5 px-6 bg-gray-50">
+      <section className="py-0 px-6 bg-gray-50">
         <h2 className="text-3xl font-bold text-center mb-8">Why Choose Our Templates?</h2>
 
         <ul className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 text-gray-700 text-lg">

@@ -7,7 +7,7 @@ const About = () => {
       {/* ========================= */}
       {/* HEADER */}
       {/* ========================= */}
-      <section className="bg-white pt-28 pb-32 px-6 text-center relative overflow-hidden">
+      <section className="bg-white pt-18 pb-32 px-6 text-center relative overflow-hidden">
         {/* subtle background */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none" />
 
