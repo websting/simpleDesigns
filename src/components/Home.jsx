@@ -6,20 +6,43 @@ export default function Home() {
     <div className="w-full">
 
       {/* ========================= */}
-{/* HERO/CATEGORY NAVIGATION */}
+{/* HERO / CATEGORY NAVIGATION */}
 {/* ========================= */}
-<section className="bg-white  border-b border-gray-200 px-6 text-center relative overflow-hidden">
+<section className="bg-white border-b border-gray-200 px-6">
   <div className="max-w-7xl mx-auto mb-4">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-      <CategoryNavItem title="Business" link="/business" />
-      <CategoryNavItem title="Portfolio" link="/portfolio" />
-      <CategoryNavItem title="Landing Pages" link="/landing-pages" />
-      <CategoryNavItem title="Agency" link="/agency" />
-      <CategoryNavItem title="Multi-Purpose" link="/multi-purpose" />
-      <CategoryNavItem title="Blog" link="/blog-templates" />
+    <div
+      className="
+        flex flex-nowrap gap-3 overflow-x-auto
+        md:grid md:grid-cols-6 md:overflow-visible text-center
+      "
+    >
+      <div className="min-w-max text-sm sm:text-base">
+        <CategoryNavItem title="Business" link="/business" />
+      </div>
+
+      <div className="min-w-max text-sm sm:text-base">
+        <CategoryNavItem title="Portfolio" link="/portfolio" />
+      </div>
+
+      <div className="min-w-max text-sm sm:text-base">
+        <CategoryNavItem title="Landing Pages" link="/landing-pages" />
+      </div>
+
+      <div className="min-w-max text-sm sm:text-base">
+        <CategoryNavItem title="Agency" link="/agency" />
+      </div>
+
+      <div className="min-w-max text-sm sm:text-base">
+        <CategoryNavItem title="Multi-Purpose" link="/multi-purpose" />
+      </div>
+
+      <div className="min-w-max text-sm sm:text-base">
+        <CategoryNavItem title="Blog" link="/blog-templates" />
+      </div>
     </div>
   </div>
 </section>
+
 
 
       {/* ========================= */}
@@ -68,13 +91,19 @@ export default function Home() {
 }
 
 /* ========================= */
-/* CATEGORY NAV ITEM        */
+/* CATEGORY NAV ITEM  (small-screens)      */
 /* ========================= */
 function CategoryNavItem({ title, link }) {
   return (
     <a
       href={link}
-      className="group flex items-center justify-center rounded-lg border border-gray-200 bg-gray-50 py-4 text-sm font-semibold text-gray-700 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition"
+      className="
+        block rounded-lg border px-4 py-2 mb-3
+        text-sm sm:text-base font-medium
+        whitespace-nowrap
+        hover:bg-gray-500 hover:text-white
+        transition-colors duration-200
+      "
     >
       {title}
     </a>
