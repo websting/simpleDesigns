@@ -18,7 +18,7 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 pt-20 pb-10">
+    <div className="max-w-3xl mx-auto px-4 pt-12 pb-10">
       <Link
         to="/blog"
         className="text-blue-600 hover:underline text-sm mb-4 inline-block"
@@ -38,7 +38,7 @@ const BlogDetail = () => {
       />
       <Link
         to="/blog"
-        className="text-blue-600 text-sm mb-4 hover:underline inline-block mr-4"
+        className="text-blue-600 text-sm mb-4 mt-4 hover:underline inline-block mr-4"
       >
         ← Back to Articles
       </Link>
