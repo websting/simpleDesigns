@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     // main wrapper
     <div className="fixed top-0 left-0 w-full z-50
-                bg-stone-300 dark:bg-gray-900/95
+                 dark:bg-gray-900/95
                 text-gray-900 dark:text-gray-100">
       {/* logo */}
       <div
