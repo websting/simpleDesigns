@@ -9,8 +9,8 @@ const Navbar = () => {
 
   return (
     // main wrapper
-    <div className="absolute top-0 left-0 w-full z-10
-                bg-stone-300 dark:bg-gray-900
+    <div className="fixed top-0 left-0 w-full z-50
+                bg-stone-300 dark:bg-gray-900/95
                 text-gray-900 dark:text-gray-100">
       {/* logo */}
       <div
@@ -48,7 +48,6 @@ const Navbar = () => {
 </div>
 
 
-
         {/* mobile menu icon / hidden by default */}
         <RxHamburgerMenu
           className="md:hidden w-7 text-2xl"
@@ -60,7 +59,7 @@ const Navbar = () => {
         {/* if on small screens is tru show menu otherwise hide menu */}
         <div
           className={`md:hidden ${
-            showMobileMenu ? "fixed w-50" : "h-0 w-0"
+            showMobileMenu ? "fixed w-72" : "h-0 w-0"
           } right-0 top-0 bottom-0 overflow-hidden bg-white/90 transition-all`}
         >
           {/* mobile close button */}
