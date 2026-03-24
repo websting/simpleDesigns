@@ -11,7 +11,7 @@ const Navbar = () => {
     // main wrapper
     <div className="fixed top-0 left-0 w-full z-50
                 bg-gray-900/95 dark:bg-gray-900/95
-                text-gray-900 dark:text-gray-100">
+                text-white-900 dark:text-gray-100">
       {/* logo */}
       <div
         className="container mx-auto flex justify-between items-center py-4 px-6
