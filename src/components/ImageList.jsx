@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 
-const ImageList = () => {
+const ImageList = ({ category }) => {
   const [templates, setTemplates] = useState([]);
 
   useEffect(() => {
@@ -11,14 +11,21 @@ const ImageList = () => {
     .then((res) => res.json())
     .then((data) => setTemplates(data));
   },[]);
-  
+
+  const filteredTemplates =
+  category === "all"
+    ? templates
+    : templates.filter(
+        (template) => template.category === category
+      );
+
   return (
     // twiak footer as needed 520 or less
     <div className="min-h-[calc(100vh-520px)] bg-gray-50">
       {/* Template Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {templates.map((template) => (
+          {filteredTemplates.map((template) => (
             <Link
               key={template.public_id}
               to={`/details/${encodeURIComponent(template.public_id)}`}

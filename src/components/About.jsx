@@ -4,107 +4,164 @@ const About = () => {
   return (
     <div className="w-full bg-gray-50">
 
-      {/* ========================= */}
       {/* HEADER */}
-      {/* ========================= */}
-      <section className="bg-white pt-18 pb-32 px-6 text-center relative overflow-hidden">
-        {/* subtle background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none" />
+      <section className="bg-white pt-20 pb-28 px-6 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-100 via-purple-50 to-white pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto">
-          <span className="inline-block mb-4 text-sm font-semibold tracking-wide text-indigo-600 uppercase">
+
+          <span className="inline-block mb-4 text-xl font-semibold tracking-wide text-indigo-600 uppercase">
             About simpleDesigns
           </span>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-6 text-gray-900">
-            Mission & Vision
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+            Templates Built for Real Projects.
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            My mission at simpleDesigns is to help you build faster with clean,
-            modern templates that eliminate design bottlenecks—so you can focus
-            on functionality and user experience.
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
+            We help developers, freelancers, and businesses launch websites faster with clean code, responsive layouts, and flexible customization.
           </p>
+
         </div>
       </section>
 
-      {/* ========================= */}
+
       {/* CONTENT */}
-      {/* ========================= */}
-      <section className="relative max-w-4xl mx-auto -mt-20 bg-white rounded-xl shadow-sm px-8 py-12 mb-24">
+      <section className="relative max-w-4xl mx-auto -mt-16 bg-white rounded-xl shadow-xl shadow-indigo-100/40 px-8 py-12 mb-24">
 
-        {/* WHY */}
-        <div className="text-center mb-12">
-          <p className="text-lg text-gray-600 italic leading-relaxed">
-            Why spend hours tweaking UI when you could be shipping features?
-            simpleDesigns templates are lightweight, easy to customize, and
-            visually polished—so you deliver faster without sacrificing quality.
+
+        {/* MISSION */}
+        {/* <div className="text-center mb-12">
+
+          <h2 className="text-3xl font-bold mb-5 text-gray-900">
+            Our Mission
+          </h2>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Great websites shouldn't require endless hours of repetitive work.
+            simpleDesigns provides ready-to-use templates that are fast,
+            customizable, and built with modern web standards.
           </p>
-        </div>
 
-        <div className="border-t border-gray-200 my-12" />
+        </div> */}
+
+
+        {/* <div className="border-t border-gray-200 my-12" /> */}
+
 
         {/* CREATOR */}
-        <div className="mb-16">
+        <div className="mb-16 mt-12">
+
           <h2 className="text-3xl font-bold mb-6 text-gray-900">
             Meet the Creator
           </h2>
 
+
           <div className="flex flex-col md:flex-row items-center gap-8">
+
             <img
               src={profilePic}
               alt="Creator of simpleDesigns"
-              className="w-28 h-28 md:w-32 md:h-32 rounded-full shadow-md border border-gray-200"
+              className="w-32 h-32 rounded-full shadow-md border border-gray-200"
             />
 
+
             <p className="text-gray-700 text-lg leading-relaxed">
-              Hi! I’m the solo creator behind simpleDesigns—a self-taught
-              developer who understands how time-consuming front-end work can
-              be. I built this platform to remove friction from your workflow
-              by offering templates that are clean, fast, and easy to integrate.
+              Hi, I'm the creator behind simpleDesigns. As a developer, I know
+              how much time goes into building polished front-end experiences.
+              I created simpleDesigns to provide developers and creators with
+              high-quality templates that are easy to customize and ready for
+              real projects.
             </p>
+
           </div>
+
         </div>
 
-        {/* UPDATES */}
+
+        {/* VALUES */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">
-            New Templates, Regularly
+
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">
+            What You Can Expect
           </h2>
 
-          <p className="text-gray-700 text-lg leading-relaxed">
-            I’m constantly releasing new templates based on user feedback and
-            modern design trends—so your projects stay fresh, relevant, and
-            production-ready.
-          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            <div className="p-5 rounded-lg bg-gray-50">
+              <h3 className="font-bold text-lg mb-2">
+                Clean Code
+              </h3>
+              <p className="text-gray-600">
+                Organized HTML, CSS, and JavaScript that is easy to understand
+                and modify.
+              </p>
+            </div>
+
+
+            <div className="p-5 rounded-lg bg-gray-50">
+              <h3 className="font-bold text-lg mb-2">
+                Modern Design
+              </h3>
+              <p className="text-gray-600">
+                Professional layouts built with current design trends and best
+                practices.
+              </p>
+            </div>
+
+
+            <div className="p-5 rounded-lg bg-gray-50">
+              <h3 className="font-bold text-lg mb-2">
+                Responsive First
+              </h3>
+              <p className="text-gray-600">
+                Templates designed to look great across desktop, tablet, and
+                mobile devices.
+              </p>
+            </div>
+
+
+            <div className="p-5 rounded-lg bg-gray-50">
+              <h3 className="font-bold text-lg mb-2">
+                Continuous Improvement
+              </h3>
+              <p className="text-gray-600">
+                New templates and improvements based on feedback and evolving
+                web standards.
+              </p>
+            </div>
+
+          </div>
+
         </div>
+
 
         {/* VISION */}
-        <div className="mb-16">
+        <div className="mb-12">
+
           <h2 className="text-3xl font-bold mb-4 text-gray-900">
-            My Vision
+            Our Vision
           </h2>
 
           <p className="text-gray-700 text-lg leading-relaxed">
-            My vision for simpleDesigns is built on{" "}
-            <span className="font-semibold text-indigo-600">speed</span>,{" "}
-            <span className="font-semibold text-pink-500">simplicity</span>, and{" "}
-            <span className="font-semibold text-orange-500">modern tools</span>.
-            That means lightweight code, scalable components, and designs that
-            stay out of your way.
+            The goal of simpleDesigns is simple: make professional web design
+            more accessible through quality templates that save time without
+            sacrificing creativity.
           </p>
+
         </div>
 
-        {/* MODE */}
+
+        {/* FINAL MESSAGE */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">
-            My Mode
-          </h2>
 
-          <p className="text-gray-700 text-lg leading-relaxed">
-            The web is already out there—let’s make it better.
+          <p className="text-xl font-semibold text-indigo-600">
+            Build faster. Design better. Launch sooner.
           </p>
+
         </div>
+
 
       </section>
 

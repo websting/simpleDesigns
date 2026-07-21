@@ -1,90 +1,115 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import ImageList from "../components/ImageList";
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
   return (
     <div className="w-full">
 
-      {/* ========================= */}
-{/* HERO / CATEGORY NAVIGATION */}
+ {/* ========================= */}
+{/* CATEGORY NAVIGATION */}
 {/* ========================= */}
-<section className="bg-white border-b border-gray-200 px-6">
-  <div className="max-w-7xl mx-auto mb-4">
+<section className="bg-white border-b border-gray-200 px-4 py-4">
+  <div className="max-w-6xl mx-auto">
+
     <div
       className="
-        flex flex-nowrap gap-3 overflow-x-auto
-        md:grid md:grid-cols-6 md:overflow-visible text-center
+        flex 
+        gap-3 
+        overflow-x-auto 
+        scrollbar-hide
+        md:justify-center
+        pb-1
       "
-    
-    
     >
-      <div className="min-w-max text-sm sm:text-base">
-        <CategoryNavItem title="Business" link="/business" />
-      </div>
 
-      <div className="min-w-max text-sm sm:text-base">
-        <CategoryNavItem title="Portfolio" link="/portfolio" />
-      </div>
+      <CategoryNavItem
+        title="All"
+        active={selectedCategory === "all"}
+        onClick={() => setSelectedCategory("all")}
+      />
 
-      <div className="min-w-max text-sm sm:text-base">
-        <CategoryNavItem title="Landing Pages" link="/landing-pages" />
-      </div>
+      <CategoryNavItem
+        title="Business"
+        active={selectedCategory === "business"}
+        onClick={() => setSelectedCategory("business")}
+      />
 
-      <div className="min-w-max text-sm sm:text-base">
-        <CategoryNavItem title="Agency" link="/agency" />
-      </div>
+      <CategoryNavItem
+        title="Portfolio"
+        active={selectedCategory === "portfolio"}
+        onClick={() => setSelectedCategory("portfolio")}
+      />
 
-      <div className="min-w-max text-sm sm:text-base">
-        <CategoryNavItem title="Multi-Purpose" link="/multi-purpose" />
-      </div>
+      <CategoryNavItem
+        title="Landing Pages"
+        active={selectedCategory === "landing-pages"}
+        onClick={() => setSelectedCategory("landing-pages")}
+      />
 
-      <div className="min-w-max text-sm sm:text-base">
-        <CategoryNavItem title="Blog" link="/blog-templates" />
-      </div>
+      <CategoryNavItem
+        title="Agency"
+        active={selectedCategory === "agency"}
+        onClick={() => setSelectedCategory("agency")}
+      />
+
+      <CategoryNavItem
+        title="Multi-Purpose"
+        active={selectedCategory === "multi-purpose"}
+        onClick={() => setSelectedCategory("multi-purpose")}
+      />
+
+      <CategoryNavItem
+        title="Blog"
+        active={selectedCategory === "blog"}
+        onClick={() => setSelectedCategory("blog")}
+      />
+
     </div>
-  </div>
-</section>
 
-
-
-      {/* ========================= */}
-{/* TEMPLATES / IMAGE LIST */}
-{/* ========================= */}
-<section id="templates" className="pt-10 pb-16 px-6 bg-gray-50 text-center">
-
-  <div className="relative max-w-5xl mx-auto">
-    <span className="inline-block mb-5 mt-2 text-sm font-semibold tracking-wide text-indigo-600 uppercase">
-      RESPONSIVE HTML5 Web Designs
-    </span>
-
-    <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-1 leading-tight">
-      Premium Website Templates <br className="hidden md:block" />
-    </h1>
-
-    <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-      Modern — fully customizable,
-      SEO-friendly, and ready for real-world projects.
-    </p>
-  </div>
-  
-  <div className="max-w-6xl mx-auto">
-    <ImageList />
   </div>
 </section>
 
       {/* ========================= */}
-      {/* NEW SECTION: WHY CHOOSE US */}
+      {/* TEMPLATES */}
       {/* ========================= */}
-      <section className="py-0 px-6 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-8">Why Choose Our Templates?</h2>
+      <section
+        id="templates"
+        className="pt-10 pb-16 px-6 bg-gray-50 text-center"
+      >
+        <div className="relative max-w-5xl mx-auto">
+          <h1 className="inline-block mb-5 mt-2 text-xl font-semibold tracking-wide text-indigo-600 uppercase">
+            Professional HTML Website Templates
+          </h1>
 
-        <ul className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 text-gray-700 text-lg">
-          <li>✔ Clean, semantic HTML5 structure</li>
-          <li>✔ Modern, professional UI design</li>
-          <li>✔ Fully responsive across devices</li>
-          <li>✔ Fast-loading, optimized performance</li>
-          <li>✔ Easy customization for any project</li>
-          <li>✔ Ideal for developers, freelancers, agencies, and small businesses</li>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+            Launch your website faster with modern, responsive,
+            SEO-friendly templates built for businesses,
+            freelancers, and creators.
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <ImageList category={selectedCategory} />
+        </div>
+      </section>
+
+      {/* ========================= */}
+      {/* WHY CHOOSE US */}
+      {/* ========================= */}
+      <section className="py-8 px-6 bg-gray-50 text-center">
+        <h2 className="text-3xl font-bold mb-8">
+          Why simpleDesigns?
+        </h2>
+
+        <ul className="max-w-4xl mx-auto grid gap-6 md:grid-cols-2 text-gray-700 text-lg">
+          <li>✔ Mobile Responsive</li>
+          <li>✔ SEO Optimized</li>
+          <li>✔ Clean HTML/CSS/JavaScript</li>
+          <li>✔ Easy to Customize</li>
+          <li>✔ Fast Performance</li>
+          <li>✔ Lifetime Updates</li>
         </ul>
       </section>
 
@@ -93,32 +118,32 @@ export default function Home() {
 }
 
 /* ========================= */
-/* CATEGORY NAV ITEM  (small-screens)      */
+/* CATEGORY BUTTON */
 /* ========================= */
-function CategoryNavItem({ title, link }) {
+
+function CategoryNavItem({ title, active, onClick }) {
   return (
-    <a
-      href={link}
-      className="
-        block rounded-lg border px-4 py-2 mb-3
-        text-sm sm:text-base font-medium
+    <button
+      onClick={onClick}
+      className={`
+        flex-shrink-0
+        px-5 py-2
+        rounded-full
+        border
+        text-sm
+        font-medium
         whitespace-nowrap
-        hover:bg-gray-500 hover:text-white
-        transition-colors duration-200
-      "
+        transition-all
+        duration-200
+
+        ${
+          active
+            ? "bg-indigo-600 text-white border-indigo-600 shadow-md"
+            : "bg-white text-gray-700 border-gray-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+        }
+      `}
     >
       {title}
-    </a>
+    </button>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
