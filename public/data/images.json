@@ -208,5 +208,66 @@
       }
     ],
     "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
+  },
+
+      {
+    "public_id": "avzhyvuxoqgwlmi8ai47",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1785794559/avzhyvuxoqgwlmi8ai47.png",
+    "title": "Electrician Template",
+    "description": "A template designed for electricians and service providers to showcase their services, projects, and customer testimonials.",
+    "author": "simpleDesigns",
+    "category": "business",
+    "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
+    "liveDemo": "https://html-electrician.netlify.app/",
+    "price": "19.99",
+    "priceId": "price_1U0YtbBqWU8yVEMvREEcrHgv",
+    "fileName": "electrician-download.zip",
+    "features": [
+      {
+        "title": "Hero Section",
+        "detail": "call-to-action buttons, and prominent contact information."
+      },
+      {
+        "title": "Services Section",
+        "detail": "Showcasing common services such as residential, commercial"
+      },
+      {
+        "title": "About/Why Choose Us Area",
+        "detail": "Highlighting experience, certifications and customer-focused messaging."
+      },
+      {
+        "title": "Feature Cards",
+        "detail": "Highlighting key services or benefits with visually appealing cards."
+      },
+      {
+        "title": "Statistics/Counter Section",
+        "detail": "Displaying key metrics or achievements with animated counters."
+      },
+      {
+        "title": "Projects/Portfolio Gallery",
+        "detail": "Showcasing completed projects or portfolio items with image galleries."
+      },
+      {
+        "title": "Customer Testimonials",
+        "detail": "Boasting positive feedback from satisfied clients."
+      },
+      {
+        "title": "FAQ section",
+        "detail": "Providing answers to common questions and concerns."
+      },
+      {
+        "title": "Contact form",
+        "detail": "Designed effectively to collect user inquiries"
+      },
+      {
+        "title": "From a technical perspective",
+        "detail": "The template is built using HTML, CSS, and JavaScript"
+      },
+      {
+        "title": "Other Features",
+        "detail": "Fully Responsive, SEO Optimized, and Cross-Browser Compatible with a clean and modern design."
+      }
+    ],
+    "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
   }
 ]
