@@ -13,12 +13,6 @@ import ThankYou from './components/Thank-you';
 import Footer from './components/Footer';
 import Cancel from './components/Cancel';
 
-
-
-
-
-
-
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
