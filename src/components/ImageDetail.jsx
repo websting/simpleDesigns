@@ -79,21 +79,16 @@ const ImageDetail = () => {
     return (
       <div className="min-h-screen bg-[#FAFAF8] px-6 py-12">
         <div className="max-w-5xl mx-auto animate-pulse">
-
           <div className="h-8 bg-gray-200 rounded w-1/3 mx-auto mb-10"></div>
-
           <div className="h-[400px] bg-gray-200 rounded-2xl mb-6"></div>
-
           <div className="h-16 bg-gray-200 rounded-xl"></div>
-
         </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full min-h-screen bg-[#FAFAF8] px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-
+    <div className="w-full min-h-screen bg-[#FAFAF8] px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16">
       <div className="max-w-5xl mx-auto">
 
         {/* TEMPLATE HEADER */}
@@ -170,5 +165,6 @@ const ImageDetail = () => {
 };
 
 export default ImageDetail;
+
 
 
