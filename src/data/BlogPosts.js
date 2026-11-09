@@ -9,7 +9,7 @@ const blogPosts = [
   {
   id: 1,
   slug: "how-to-use-starter-templates",
-  title: "How to Use Starter Templates the Right Way",
+  title: "How to Use Starter Templates",
   date: "Jul 20, 2025",
   excerpt: "Learn how to customize starter templates efficiently so you can launch projects faster without sacrificing quality.",
   content: `
@@ -39,7 +39,7 @@ const blogPosts = [
   {
   id: 2,
   slug: "how-to-wireframe-effectively",
-  title: "How to Wireframe Effectively for Faster, Cleaner Builds",
+  title: "Effective Wireframing Techniques",
   date: "Jul 22, 2025",
   excerpt: "Learn how to use wireframes to plan layouts, improve clarity, and speed up your entire design-to-development workflow.",
   content: `
@@ -69,7 +69,7 @@ const blogPosts = [
   {
     id: 3,
     slug:  "high-converting-templates",
-    title: "How We Build Templates That Convert",
+    title: "Build Templates That Convert",
     date: "Jul 15, 2025",
     excerpt: "Explore our design philosophy and technical stack for building fast, beautiful, and effective templates.",
     content: `

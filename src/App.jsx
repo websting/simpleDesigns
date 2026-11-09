@@ -1,8 +1,7 @@
 
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from './components/Home';
-import Searchbar from './components/Searchbar';
 import ImageDetail from './components/ImageDetail';
 import DownloadPage from './components/DownloadPage';
 import OrderSummary from './components/OrderSummary';
@@ -16,29 +15,27 @@ import Cancel from './components/Cancel';
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Always visible */}
       <Navbar />
-      <Searchbar />
-      {/*Main content area */}
-      <main className='flex flex-col flex-1'>
-      {/* Dynamic Menu Links */}
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/details/:public_id' element={<ImageDetail />} />
-        <Route path='checkout' element={<OrderSummary />} />
-        <Route path='/download' element={<DownloadPage />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/blog/:slug' element={<BlogDetail />} />
-        <Route path='/Thank-you' element={<ThankYou />} />
-        <Route path='/cancel' element={<Cancel />} />
-      </Routes>
+
+      <main className="flex flex-col flex-1">
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/details/:public_id' element={<ImageDetail />} />
+          <Route path='checkout' element={<OrderSummary />} />
+          <Route path='/download' element={<DownloadPage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/blog/:slug' element={<BlogDetail />} />
+          <Route path='/Thank-you' element={<ThankYou />} />
+          <Route path='/cancel' element={<Cancel />} />
+        </Routes>
       </main>
+
       <Footer />
     </div>
   );
-
 }
 
 export default App;
+
 

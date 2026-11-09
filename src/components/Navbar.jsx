@@ -1,108 +1,132 @@
+
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  // mobile menu will be hidden by default so initial value is set to false
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  const closeMobileMenu = () => setShowMobileMenu(false);
+
   return (
-    // main wrapper
-    <div className="fixed top-0 left-0 w-full z-50
-                bg-gray-900/95 dark:bg-gray-900/95
-                text-white">
-      {/* logo */}
-      <div
-        className="container mx-auto flex justify-between items-center py-4 px-6
-        md:px-20 lg:px-32 cursor-pointer"
-      >
-        <Link to="/" className="font-bold text-2xl">
-          simpleDesigns
-        </Link>
-        {/* Desktop links */}
-        <ul className="hidden md:flex gap-7">
-          <Link to="/">
-            <li className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">Home</li>
-          </Link>
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 lg:px-10">
 
-          <Link to="/blog">
-            <li className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">Blog</li>
-          </Link>
-          
-          <Link to="/about">
-            <li className="cursor-pointer hover:text-gray-500 dark:hover:text-gray-300">About</li>
-          </Link>
-          
-        </ul>
-        
-        {/* button hide on small device*/}
-        <div className="hidden md:flex items-center gap-3">
-
-
-  <button className="bg-white dark:bg-gray-800 px-8 py-2 rounded-full cursor-pointer
-                     hover:text-gray-500 dark:text-gray-200
-                     dark:hover:bg-gray-700 transition">
-    Login
-  </button>
-</div>
-
-
-        {/* mobile menu icon / hidden by default */}
-        <RxHamburgerMenu
-          className="md:hidden w-7 text-2xl"
-          onClick={() => setShowMobileMenu(true)}
-        />
-      </div>
-      {/* movible menu / hidden by default*/}
-      <div>
-        {/* if on small screens is tru show menu otherwise hide menu */}
-        <div
-          className={`md:hidden ${
-            showMobileMenu ? "fixed w-72" : "h-0 w-0"
-          } right-0 top-0 bottom-0 overflow-hidden bg-white/90 transition-all`}
+        {/* Brand */}
+        <Link
+          to="/"
+          className="text-2xl font-bold tracking-tight text-gray-900"
         >
-          {/* mobile close button */}
-          <div
-            className="flex justify-end text-2xl p-6 cursor-pointer"
-            onClick={() => setShowMobileMenu(false)}
+          simple<span className="text-indigo-600">Designs</span>
+          <span className="text-indigo-600">.</span>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-9">
+          <Link
+            to="/"
+            className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors"
           >
-            {/* mobile close icon */}
-            <AiOutlineClose />
+            Home
+          </Link>
+
+          <Link
+            to="/blog"
+            className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors"
+          >
+            Blog
+          </Link>
+
+          <Link
+            to="/about"
+            className="text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors"
+          >
+            About
+          </Link>
+        </nav>
+
+        {/* Desktop Action */}
+        <div className="hidden md:flex items-center">
+          <button className="bg-indigo-600 text-white text-sm font-semibold px-6 py-2.5 rounded-full hover:bg-indigo-700 hover:shadow-md transition-all duration-200">
+            Login
+          </button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setShowMobileMenu(true)}
+          className="md:hidden text-gray-800 p-2"
+          aria-label="Open navigation menu"
+        >
+          <RxHamburgerMenu className="text-2xl" />
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div
+        className={`md:hidden fixed inset-0 z-50 bg-black/30 transition-opacity duration-300 ${
+          showMobileMenu
+            ? "opacity-100 visible"
+            : "opacity-0 invisible pointer-events-none"
+        }`}
+        onClick={closeMobileMenu}
+      >
+        <div
+          className={`absolute right-0 top-0 h-full w-72 max-w-[85%] bg-white shadow-xl transition-transform duration-300 ${
+            showMobileMenu ? "translate-x-0" : "translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Mobile Header */}
+          <div className="flex justify-between items-center px-6 py-5 border-b border-gray-100">
+            <Link
+              to="/"
+              onClick={closeMobileMenu}
+              className="text-xl font-bold text-gray-900"
+            >
+              simple<span className="text-indigo-600">Designs</span>.
+            </Link>
+
+            <button
+              onClick={closeMobileMenu}
+              className="text-gray-600 text-2xl p-1"
+              aria-label="Close navigation menu"
+            >
+              <AiOutlineClose />
+            </button>
           </div>
-          {/* mobile links / when clicked menu closes */}
-          <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg text-blue-800 font-medium">
-            <Link to="/">
-            <a
-              href="home"
-              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
-              onClick={() => setShowMobileMenu(false)}
+
+          {/* Mobile Links */}
+          <nav className="flex flex-col px-6 py-8 gap-3">
+            <Link
+              to="/"
+              onClick={closeMobileMenu}
+              className="px-4 py-3 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition"
             >
               Home
-            </a>
             </Link>
-            <Link to="/blog">
-            <a
-              href="blog"
-              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
-              onClick={() => setShowMobileMenu(false)}
+
+            <Link
+              to="/blog"
+              onClick={closeMobileMenu}
+              className="px-4 py-3 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition"
             >
               Blog
-            </a>
             </Link>
-            <Link to="/about">
-            <a
-              href="about"
-              className="px-4 py-2 rounded-full inline-block hover:text-purple-800"
-              onClick={() => setShowMobileMenu(false)}
+
+            <Link
+              to="/about"
+              onClick={closeMobileMenu}
+              className="px-4 py-3 rounded-lg text-gray-700 font-medium hover:bg-indigo-50 hover:text-indigo-600 transition"
             >
               About
-            </a>
             </Link>
-          </ul>
+          </nav>
+
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

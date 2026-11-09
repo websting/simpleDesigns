@@ -1,42 +1,76 @@
-import React from "react";
+
 import BlogCard from "../components/BlogCard";
 import blogPosts from "../data/BlogPosts";
 
 const Blog = () => {
   return (
-    <div className="w-full bg-gray-50">
+    <div className="w-full bg-[#FAFAF8]">
 
-      {/* ========================= */}
-      {/* BLOG HEADER */}
-      {/* ========================= */}
-      <section className="bg-white pt-18 pb-32 px-6 text-center relative overflow-hidden">
-        {/* subtle background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-100 via-purple-50 to-white pointer-events-none" />
+      {/* BLOG HERO */}
+      <section className="bg-[#FAFAF8] px-6 py-20 md:py-24 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
 
-        <div className="relative max-w-4xl mx-auto">
-          <span className="inline-block mb-4 text-xl font-semibold tracking-wide text-indigo-600 uppercase">
+          <span className="inline-block mb-5 px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-semibold tracking-wide uppercase">
             simpleDesigns Blog
           </span>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-            Latest Articles & Insights
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight text-gray-900 mb-6">
+            Latest Articles
+            <br />
+            & <span className="text-indigo-600">Insights.</span>
           </h1>
 
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg md:text-xl">
+          <p className="text-gray-500 max-w-2xl mx-auto text-base md:text-xl leading-relaxed">
             Tutorials, guides, and practical tips to help you build faster,
             design better, and grow your online presence.
           </p>
+
+          <div className="mt-8 flex justify-center items-center gap-3 text-sm text-gray-400">
+            <span>Design</span>
+            <span>•</span>
+            <span>Development</span>
+            <span>•</span>
+            <span>Inspiration</span>
+          </div>
+
         </div>
       </section>
 
-      {/* ========================= */}
-      {/* BLOG GRID */}
-      {/* ========================= */}
-      <section className="relative w-full max-w-6xl mx-auto -mt-20 z-10 px-6 pb-24">
-        <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
-            <BlogCard key={post.id} post={post} className="shadow-xl shadow-indigo-100/40" />
-          ))}
+      {/* BLOG ARTICLES */}
+      <section className="px-4 sm:px-6 pt-8 md:pt-10 pb-20">
+
+        <div className="max-w-7xl mx-auto">
+
+          {/* SECTION HEADING */}
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <span className="text-sm font-semibold tracking-widest uppercase text-indigo-600">
+                From the Blog
+              </span>
+
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">
+                Explore Our Latest Posts
+              </h2>
+            </div>
+
+            <span className="hidden sm:block text-sm text-gray-400">
+              Ideas to inspire your next project
+            </span>
+          </div>
+
+          {/* ARTICLE GRID */}
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+            {blogPosts.map((post) => (
+              <BlogCard
+                key={post.id}
+                post={post}
+                className="shadow-sm hover:shadow-xl transition-all duration-300"
+              />
+            ))}
+
+          </div>
+
         </div>
       </section>
 
@@ -45,5 +79,6 @@ const Blog = () => {
 };
 
 export default Blog;
+
 
 
