@@ -111,7 +111,18 @@ export default function Home() {
 
           </div>
 
-          <p className="mt-8 text-sm text-gray-400">
+          {/* WHY CHOOSE US LINK */}
+          <div className="mt-7">
+            <a
+              href="#why-simpledesigns"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+            >
+              <span>↓</span>
+              Why Choose simpleDesigns?
+            </a>
+          </div>
+
+          <p className="mt-7 text-sm text-gray-400">
             ✓ Responsive Designs
             <span className="mx-3">•</span>
             ✓ Clean Code
@@ -214,7 +225,10 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 px-6 bg-[#FAFAF8] border-t border-gray-100">
+      <section
+        id="why-simpledesigns"
+        className="py-20 px-6 bg-[#FAFAF8] border-t border-gray-100 scroll-mt-20"
+      >
 
         <div className="max-w-5xl mx-auto text-center">
 
@@ -260,4 +274,5 @@ export default function Home() {
     </div>
   );
 }
+
 
