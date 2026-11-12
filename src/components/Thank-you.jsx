@@ -24,7 +24,7 @@ export default function ThankYou() {
           </h1>
 
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-md mx-auto">
-            Your download was successful. We appreciate your support and hope you enjoy building with your new template!
+            Your download was successful. We appreciate your support and hope you enjoy building with your new template!  Don't forget to check the README file for instructions and tips on how to get started. If you have any questions or need assistance, feel free to reach out to our support team.
           </p>
 
           {/* RETURN HOME */}
