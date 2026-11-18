@@ -269,5 +269,63 @@
       }
     ],
     "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
+  },
+
+  {
+    "public_id": "gbyqh4jpmjlxscykitj8",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1795010808/gbyqh4jpmjlxscykitj8.png",
+    "title": "Website Hosting Template",
+    "description": "Modern, responsive web hosting template built with React, Vite, and Tailwind CSS.",
+    "author": "simpleDesigns",
+    "category": "landing-page",
+    "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
+    "liveDemo": "https://html-electrician.netlify.app/",
+    "price": "24.99",
+    "priceId": "price_1U0YtbBqWU8yVEMvREEcrHgv",
+    "fileName": "clowd-host-download.zip",
+    "features": [
+      {
+        "title": "Hero Section",
+        "detail": "SEO landing page with a compelling headline and call-to-action buttons."
+      },
+      {
+        "title": "Services Section",
+        "detail": "Domain registration, and web hosting, services with clear descriptions and pricing."
+      },
+      {
+        "title": "About/Why Choose Us Area",
+        "detail": "Highlighting values and benefits of choosing the hosting service."
+      },
+      {
+        "title": "Feature Cards",
+        "detail": "Highlighting key services or benefits with visually appealing cards."
+      },
+      {
+        "title": "Performance Overview Card",
+        "detail": "Showcasing Optimized performance, Enabled security, and Scalable resources available."
+      },
+      {
+        "title": "Extension Table",
+        "detail": "Displaying supported domain extensions with a clear table format."
+      },
+      {
+        "title": "Pricing Table",
+        "detail": "Presenting different hosting plans with features and pricing for easy comparison."
+      },
+      
+      {
+        "title": "Contact form",
+        "detail": "Designed effectively to collect user inquiries"
+      },
+      {
+        "title": "From a technical perspective",
+        "detail": "The template is built using React, Vite, and Tailwind CSS."
+      },
+      {
+        "title": "Other Features",
+        "detail": "Fully Responsive, SEO Optimized, and Cross-Browser Compatible with a clean and modern design."
+      }
+    ],
+    "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
   }
 ]
