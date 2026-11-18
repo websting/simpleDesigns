@@ -277,7 +277,7 @@
     "title": "Website Hosting Template",
     "description": "Modern, responsive web hosting template built with React, Vite, and Tailwind CSS.",
     "author": "simpleDesigns",
-    "category": "landing-page",
+    "category": "landing-pages",
     "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
     "liveDemo": "https://ah-react-clowd-host.netlify.app/",
     "price": "24.99",
