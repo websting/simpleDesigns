@@ -20,7 +20,7 @@ const Navbar = () => {
             to="/"
             className="text-2xl font-bold tracking-tight text-gray-900"
           >
-            simple<span className="text-indigo-600">Designs</span>
+           AH simple<span className="text-indigo-600">Designs</span>
             <span className="text-indigo-600">.</span>
           </Link>
 

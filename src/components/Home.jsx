@@ -68,8 +68,8 @@ export default function Home() {
     <div className="w-full bg-[#FAFAF8]">
 
       {/* HERO SECTION */}
-      <section className="min-h-[calc(100svh-58px)] flex items-center px-6 py-20 md:py-24">
-        <div className="max-w-5xl mx-auto text-center">
+      <section id="hero" className="min-h-[calc(100svh-58px)] flex items-center px-6 py-20 md:py-24">
+        <div className="max-w-5xl mx-auto text-center animate-zoom-in-left">
 
           <span className="inline-flex items-center gap-2 px-4 py-2 mb-7 rounded-full bg-indigo-50 text-indigo-700 text-xs sm:text-sm font-semibold tracking-wide">
             <span className="w-2 h-2 rounded-full bg-indigo-600"></span>
@@ -77,18 +77,16 @@ export default function Home() {
           </span>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-gray-900 mb-7">
-            Beautiful Websites.
+            Premium HTML & React
             <br />
-            Built for Your{" "}
+            Starter{" "}
             <span className="text-indigo-600">
-              Next Big Idea.
+              Templates
             </span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-base md:text-xl leading-relaxed text-gray-500 mb-9">
-            Discover professionally designed, responsive HTML templates
-            that help businesses, freelancers and creators build their
-            online presence.
+            Everything you need to build, customize, and launch right out of the box.
           </p>
 
           {/* HERO BUTTONS */}
