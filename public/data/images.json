@@ -281,7 +281,7 @@
     "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
     "liveDemo": "https://ah-react-clowd-host.netlify.app/",
     "price": "24.99",
-    "priceId": "price_1U0YtbBqWU8yVEMvREEcrHgv",
+    "priceId": "price_1UdAMXBqWU8yVEMvVU2lxLde",
     "fileName": "clowd-host-download.zip",
     "features": [
       {
@@ -320,6 +320,64 @@
       {
         "title": "From a technical perspective",
         "detail": "The template is built using React, Vite, and Tailwind CSS."
+      },
+      {
+        "title": "Other Features",
+        "detail": "Fully Responsive, SEO Optimized, and Cross-Browser Compatible with a clean and modern design."
+      }
+    ],
+    "included":  ["HTML Files, ", "CSS File, ", "Tailwind.config, ", "JavaScript File, ", "Image Place Holders"]
+  },
+
+  {
+    "public_id": "i1xv4drveblsy9ecqk38",
+    "url": "https://res.cloudinary.com/drnvpiwsy/image/upload/v1795443447/i1xv4drveblsy9ecqk38.png",
+    "title": "Agency Website Template",
+    "description": "Aster Studio is a modern, responsive creative agency website template built with React, Vite, Tailwind CSS, and Lucide React",
+    "author": "simpleDesigns",
+    "category": "agency",
+    "credits": "Image place holder by: Unsplash. Image Storage API by: Cloudinary. Font Awesome Icons ",
+    "liveDemo": "https://react-aster-agency.netlify.app/",
+    "price": "19.99",
+    "priceId": "price_1UezF1BqWU8yVEMvoZgnhAwY",
+    "fileName": "aster-agency-download.zip",
+    "features": [
+      {
+        "title": "Hero Section",
+        "detail": "Modern, distinctive agency design"
+      },
+      {
+        "title": "Services Section",
+        "detail": "Services and process sections with clear descriptions and pricing."
+      },
+      {
+        "title": "About/Why Choose Us Area",
+        "detail": "React component-based architecture"
+      },
+      {
+        "title": "Feature Cards",
+        "detail": "Tailwind CSS styling"
+      },
+      {
+        "title": "Performance Overview Card",
+        "detail": "Responsive desktop, tablet, and mobile layouts "
+      },
+      {
+        "title": "Extension Table",
+        "detail": "Displaying supported domain extensions with a clear table format."
+      },
+      {
+        "title": "What WE Do Section",
+        "detail": "Showcasing ideas in a visually appealing manner with a clean and modern design."
+      },
+      
+      {
+        "title": "Contact form",
+        "detail": "Custom contact section with direct email link"
+      },
+      {
+        "title": "Selected Work Section",
+        "detail": "Locally stored images and assets for fast loading and offline access"
       },
       {
         "title": "Other Features",
